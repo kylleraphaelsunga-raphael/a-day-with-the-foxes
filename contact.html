@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | ADF2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section id="form">
+  <div class="container">
+    <h2 class="title">Contact Us</h2>
+    <p class="sub">Message the ADF team</p>
+    <div class="contact-grid">
+      <!-- TOP: form -->
+      <form class="paper cf rv" id="contact-form">
+        <div><label for="name">Name</label><input id="name" name="name" required></div>
+        <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
+        <div><label for="subject">Subject</label><input id="subject" name="subject" required></div>
+        <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
+        <button class="btn dark" type="submit">Send Message</button>
+        <div class="msg" id="cf-msg" style="color:#000"></div>
+      </form>
+
+      <!-- MIDDLE: ADF contact -->
+      <div class="rv">
+        <h3 style="font-size:1.8rem;margin-bottom:16px">ADF Contact Information</h3>
+        <ul class="clist">
+          <li><span>👩‍🏫</span><div><b>Dr. Mary Jane Rabena</b><br>Faculty Adviser / Coordinator</div></li>
+          <li><span>👨‍🏫</span><div><b>Sir Bon Flores</b><br>Coordinator</div></li>
+          <li><span>📍</span><div>SJH Building<br>Holy Angel University, Angeles City, Pampanga</div></li>
+          <li><span>✉️</span><div>adf2027@example.com</div></li>
+          <li><span>🔗</span><div>Facebook · Instagram · YouTube · TikTok</div></li>
+        </ul>
+        <div class="map" id="map" style="margin-top:20px"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Weather API -->
+<section style="padding-top:0">
+  <div class="container">
+    <h2 class="title">Weather Check</h2>
+    <p class="sub">Plan your trip to HAU</p>
+    <div class="weather" id="weather"><div class="wx">Loading…</div></div>
+  </div>
+</section>
+
+<!-- BOTTOM: team -->
+<section>
+  <div class="container">
+    <h2 class="title">The Team</h2>
+    <p class="sub">Web Publishing &amp; Digital Advertising</p>
+    <div class="team">
+      <div class="member rv"><div class="av">A</div><b>Alsola, Kurt</b></div>
+      <div class="member rv"><div class="av">E</div><b>Endaya, Adrienne</b></div>
+      <div class="member rv"><div class="av">S</div><b>Sunga, Kylle</b></div>
+      <div class="member rv"><div class="av">M</div><b>Mendoza, Franshin</b></div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>

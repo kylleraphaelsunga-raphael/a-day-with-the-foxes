@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Explore | ADF2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="site-header"></div>
+
+<section style="padding-bottom:30px">
+  <div class="container">
+    <h2 class="title">Countdown to ADF2027</h2>
+    <p class="sub">February 23, 2027 · 9:00 AM</p>
+    <div class="countdown" id="countdown"></div>
+  </div>
+</section>
+
+<!-- B1. GALLERY -->
+<section id="gallery-sec">
+  <div class="container">
+    <h2 class="title">ADF2027 Gallery</h2>
+    <p class="sub">A visual journey through the future of computing</p>
+    <div class="filters" id="filters"></div>
+    <div class="gallery" id="gallery"></div>
+  </div>
+</section>
+<div class="lightbox" id="lightbox">
+  <button class="lb-btn lb-x" id="lb-x" aria-label="Close">×</button>
+  <button class="lb-btn lb-p" id="lb-p" aria-label="Previous">‹</button>
+  <div id="lb-body"></div>
+  <button class="lb-btn lb-n" id="lb-n" aria-label="Next">›</button>
+  <div class="lb-cap" id="lb-cap"></div>
+</div>
+
+
+<!-- B2. INTERACTIVE: flip cards -->
+<section id="orgs">
+  <div class="container">
+    <h2 class="title">Meet the Organizations</h2>
+    <p class="sub">Flip a card to learn more</p>
+    <div class="grid g4" id="flip-cards"></div>
+  </div>
+</section>
+
+<!-- B2. INTERACTIVE: schedule tabs -->
+<section>
+  <div class="container">
+    <h2 class="title">Event Schedule</h2>
+    <p class="sub">Tentative program</p>
+    <div class="tabs" id="sched-tabs">
+      <button class="chip on" data-t="d1">Day 1 · Feb 23</button>
+      <button class="chip" data-t="d2">Day 2 · Feb 24</button>
+    </div>
+    <div class="paper tab-panel on" id="d1">
+      <div class="slot"><b>9:00 AM</b><span>Registration &amp; Welcome</span></div>
+      <div class="slot"><b>10:00 AM</b><span>Opening Program</span></div>
+      <div class="slot"><b>11:00 AM</b><span>Campus Tour</span></div>
+      <div class="slot"><b>1:00 PM</b><span>Org Booths Open</span></div>
+      <div class="slot"><b>3:00 PM</b><span>Games &amp; Giveaways</span></div>
+    </div>
+    <div class="paper tab-panel" id="d2">
+      <div class="slot"><b>9:00 AM</b><span>Tech Demos</span></div>
+      <div class="slot"><b>11:00 AM</b><span>Faculty Meet &amp; Greet</span></div>
+      <div class="slot"><b>1:00 PM</b><span>Mascot Photo Ops</span></div>
+      <div class="slot"><b>3:00 PM</b><span>Awarding &amp; Closing</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- B2. INTERACTIVE: quiz -->
+<section>
+  <div class="container">
+    <h2 class="title">Which Org Fits You?</h2>
+    <p class="sub">Take the 4-question quiz</p>
+    <div class="paper quiz" id="quiz"></div>
+  </div>
+</section>
+
+<!-- B2. INTERACTIVE: FAQ -->
+<section>
+  <div class="container">
+    <h2 class="title">FAQ</h2>
+    <p class="sub">Quick answers</p>
+    <div class="faq">
+      <div class="faq-item"><button class="faq-q">Who can join A Day with the Foxes?</button><div class="faq-a">Students who want to experience HAU campus life and discover the School of Computing.</div></div>
+      <div class="faq-item"><button class="faq-q">Is there a registration fee?</button><div class="faq-a">Update this answer with the official details from the organizers.</div></div>
+      <div class="faq-item"><button class="faq-q">Where is the event held?</button><div class="faq-a">SJH Building, Academic Hall, Holy Angel University, Angeles City, Pampanga.</div></div>
+      <div class="faq-item"><button class="faq-q">How do I join an organization?</button><div class="faq-a">Visit the booths during the event or send us a message through the Contact page.</div></div>
+    </div>
+  </div>
+</section>
+
+<div id="site-footer"></div>
+<script src="script.js"></script>
+</body>
+</html>
