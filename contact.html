@@ -1,69 +1,337 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Contact | ADF2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="description" content="Contact the ADF2027 organizers to ask questions about A Day with the Foxes at Holy Angel University.">
+
+    <title>Contact Us | ADF2027</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<div id="site-header"></div>
 
-<section id="form">
-  <div class="container">
-    <h2 class="title">Contact Us</h2>
-    <p class="sub">Message the ADF team</p>
-    <div class="contact-grid">
-      <!-- TOP: form -->
-      <form class="paper cf rv" id="contact-form">
-        <div><label for="name">Name</label><input id="name" name="name" required></div>
-        <div><label for="email">Email</label><input id="email" name="email" type="email" required></div>
-        <div><label for="subject">Subject</label><input id="subject" name="subject" required></div>
-        <div><label for="message">Message</label><textarea id="message" name="message" rows="5" required></textarea></div>
-        <button class="btn dark" type="submit">Send Message</button>
-        <div class="msg" id="cf-msg" style="color:#000"></div>
-      </form>
+    <div id="site-header"></div>
 
-      <!-- MIDDLE: ADF contact -->
-      <div class="rv">
-        <h3 style="font-size:1.8rem;margin-bottom:16px">ADF Contact Information</h3>
-        <ul class="clist">
-          <li><span>👩‍🏫</span><div><b>Dr. Mary Jane Rabena</b><br>Faculty Adviser / Coordinator</div></li>
-          <li><span>👨‍🏫</span><div><b>Sir Bon Flores</b><br>Coordinator</div></li>
-          <li><span>📍</span><div>SJH Building<br>Holy Angel University, Angeles City, Pampanga</div></li>
-          <li><span>✉️</span><div>adf2027@example.com</div></li>
-          <li><span>🔗</span><div>Facebook · Instagram · YouTube · TikTok</div></li>
-        </ul>
-        <div class="map" id="map" style="margin-top:20px"></div>
-      </div>
-    </div>
-  </div>
-</section>
+    <main>
 
-<!-- Weather API -->
-<section style="padding-top:0">
-  <div class="container">
-    <h2 class="title">Weather Check</h2>
-    <p class="sub">Plan your trip to HAU</p>
-    <div class="weather" id="weather"><div class="wx">Loading…</div></div>
-  </div>
-</section>
+        <!-- PAGE HERO -->
+        <section class="hero">
+            <div class="container">
+                <small>WE'RE HERE TO HELP</small>
 
-<!-- BOTTOM: team -->
-<section>
-  <div class="container">
-    <h2 class="title">The Team</h2>
-    <p class="sub">Web Publishing &amp; Digital Advertising</p>
-    <div class="team">
-      <div class="member rv"><div class="av">A</div><b>Alsola, Kurt</b></div>
-      <div class="member rv"><div class="av">E</div><b>Endaya, Adrienne</b></div>
-      <div class="member rv"><div class="av">S</div><b>Sunga, Kylle</b></div>
-      <div class="member rv"><div class="av">M</div><b>Mendoza, Franshin</b></div>
-  </div>
-</section>
+                <h1>
+                    Contact<br>
+                    <span>ADF2027</span>
+                </h1>
 
-<div id="site-footer"></div>
-<script src="script.js"></script>
+                <p>
+                    Have a question about the event? Send us a message.
+                </p>
+            </div>
+        </section>
+
+        <!-- CONTACT FORM -->
+        <section id="form">
+            <div class="container">
+                <h2 class="title">Send Us a Message</h2>
+
+                <p class="sub">
+                    We'd Love to Hear From You
+                </p>
+
+                <div class="contact-grid">
+
+                    <div class="paper">
+                        <h3>Contact the Organizers</h3>
+
+                        <p style="margin:12px 0 22px;">
+                            Use the form to ask questions about the event,
+                            participating organizations, activities, or other
+                            ADF2027 information.
+                        </p>
+
+                        <form id="contact-form" class="cf">
+
+                            <div>
+                                <label for="customer-name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="customer-name"
+                                    name="name"
+                                    placeholder="Enter your full name"
+                                    autocomplete="name"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="customer-email">Email Address</label>
+                                <input
+                                    type="email"
+                                    id="customer-email"
+                                    name="email"
+                                    placeholder="you@example.com"
+                                    autocomplete="email"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="subject">Subject</label>
+                                <input
+                                    type="text"
+                                    id="subject"
+                                    name="subject"
+                                    placeholder="What is your inquiry about?"
+                                    required
+                                >
+                            </div>
+
+                            <div>
+                                <label for="message">Message</label>
+                                <textarea
+                                    id="message"
+                                    name="message"
+                                    rows="6"
+                                    placeholder="Write your message here..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <button type="submit" class="btn dark">
+                                Submit Message
+                            </button>
+
+                            <p id="cf-msg" class="msg" role="status" aria-live="polite"></p>
+
+                        </form>
+                    </div>
+
+                    <!-- CONTACT INFORMATION -->
+                    <div>
+                        <h3>Event Information</h3>
+
+                        <p style="color:#ddd; margin:12px 0 24px;">
+                            Find the planned venue and contact details for
+                            A Day with the Foxes 2027 below.
+                        </p>
+
+                        <ul class="clist">
+
+                            <li>
+                                <span>📍</span>
+                                <div>
+                                    <strong>Venue</strong>
+                                    <p style="color:#ddd;">
+                                        SJH Building, Academic Hall<br>
+                                        Holy Angel University<br>
+                                        Angeles City, Pampanga
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>📅</span>
+                                <div>
+                                    <strong>Event Dates</strong>
+                                    <p style="color:#ddd;">
+                                        February 23–24, 2027
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>🕘</span>
+                                <div>
+                                    <strong>Event Hours</strong>
+                                    <p style="color:#ddd;">
+                                        9:00 AM – 4:00 PM
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>👩‍🏫</span>
+                                <div>
+                                    <strong>Faculty Adviser / Coordinator</strong>
+                                    <p style="color:#ddd;">
+                                        Dr. Mary Jane Rabena
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>👨‍🏫</span>
+                                <div>
+                                    <strong>Coordinator</strong>
+                                    <p style="color:#ddd;">
+                                        Sir Bon Flores
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li>
+                                <span>✉️</span>
+                                <div>
+                                    <strong>Email</strong>
+                                    <p style="color:#ddd;">
+                                        <a href="mailto:adf2027@example.com">
+                                            adf2027@example.com
+                                        </a>
+                                    </p>
+                                    <small style="color:#b9b9b9;">
+                                        Replace this placeholder with the official event email.
+                                    </small>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                        <br>
+
+                        <h3>Follow Our Campaign</h3>
+
+                        <p style="color:#ddd; margin:10px 0;">
+                            Check the official ADF2027 social media accounts
+                            for event announcements and updates.
+                        </p>
+
+                        <div class="tags">
+                            <span>Facebook</span>
+                            <span>Instagram</span>
+                            <span>YouTube</span>
+                            <span>TikTok</span>
+                        </div>
+
+                        <p style="color:#b9b9b9; font-size:.82rem; margin-top:12px;">
+                            Official social media links will be added once confirmed.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- MAP -->
+        <section id="venue">
+            <div class="container">
+                <h2 class="title">Find Our Venue</h2>
+
+                <p class="sub">
+                    Visit Holy Angel University
+                </p>
+
+                <div id="map" class="map">
+                    <iframe
+                        title="Holy Angel University location map"
+                        loading="lazy"
+                        src="https://maps.google.com/maps?q=Holy%20Angel%20University%2C%20Angeles%20City%2C%20Pampanga&output=embed"
+                        referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+
+                <div style="text-align:center; margin-top:22px;">
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Holy+Angel+University+Angeles+City+Pampanga"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="btn"
+                    >
+                        Open in Google Maps
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- WEATHER -->
+        <section id="weather-section">
+            <div class="container">
+                <h2 class="title">Weather Information</h2>
+
+                <p class="sub">
+                    Check the Conditions in Angeles City
+                </p>
+
+                <p style="text-align:center; max-width:760px; margin:0 auto 25px; color:#ddd;">
+                    Current weather information is provided as a convenience
+                    for visitors planning their campus trip.
+                </p>
+
+                <div id="weather" class="weather">
+                    <div class="wx">
+                        <b>🌤️</b>
+                        Loading weather information...
+                    </div>
+                </div>
+
+                <p style="text-align:center; color:#b9b9b9; font-size:.82rem; margin-top:16px;">
+                    Weather forecasts can change. Check an updated forecast
+                    closer to the event date.
+                </p>
+            </div>
+        </section>
+
+        <!-- PROJECT TEAM -->
+        <section id="team">
+            <div class="container">
+                <h2 class="title">Meet the Project Team</h2>
+
+                <p class="sub">
+                    The Team Behind This Website
+                </p>
+
+                <div class="team">
+
+                    <article class="member">
+                        <div class="av">KA</div>
+                        <h3>Kurt Alsola</h3>
+                        <p style="color:#b9b9b9; margin-top:8px;">
+                            Website Project Team
+                        </p>
+                    </article>
+
+                    <article class="member">
+                        <div class="av">AE</div>
+                        <h3>Adrienne Endaya</h3>
+                        <p style="color:#b9b9b9; margin-top:8px;">
+                            Website Project Team
+                        </p>
+                    </article>
+
+                    <article class="member">
+                        <div class="av">KS</div>
+                        <h3>Kylle Sunga</h3>
+                        <p style="color:#b9b9b9; margin-top:8px;">
+                            Website Project Team
+                        </p>
+                    </article>
+
+                    <article class="member">
+                        <div class="av">FM</div>
+                        <h3>Franshin Mendoza</h3>
+                        <p style="color:#b9b9b9; margin-top:8px;">
+                            Website Project Team
+                        </p>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div id="site-footer"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>

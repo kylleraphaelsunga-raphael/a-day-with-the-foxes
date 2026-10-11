@@ -1,99 +1,337 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Explore | ADF2027</title>
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="description" content="Explore ADF2027 features, student organizations, promotional materials, and event brochure at Holy Angel University.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <title>Features | ADF2027</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/features.css">
 </head>
+
 <body>
-<div id="site-header"></div>
 
-<section style="padding-bottom:30px">
-  <div class="container">
-    <h2 class="title">Countdown to ADF2027</h2>
-    <p class="sub">February 23, 2027 · 9:00 AM</p>
-    <div class="countdown" id="countdown"></div>
-  </div>
-</section>
+    <!-- Shared navigation -->
+    <div id="site-header"></div>
 
-<!-- B1. GALLERY -->
-<section id="gallery-sec">
-  <div class="container">
-    <h2 class="title">ADF2027 Gallery</h2>
-    <p class="sub">A visual journey through the future of computing</p>
-    <div class="filters" id="filters"></div>
-    <div class="gallery" id="gallery"></div>
-  </div>
-</section>
-<div class="lightbox" id="lightbox">
-  <button class="lb-btn lb-x" id="lb-x" aria-label="Close">×</button>
-  <button class="lb-btn lb-p" id="lb-p" aria-label="Previous">‹</button>
-  <div id="lb-body"></div>
-  <button class="lb-btn lb-n" id="lb-n" aria-label="Next">›</button>
-  <div class="lb-cap" id="lb-cap"></div>
-</div>
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="hero" id="features-home">
+            <div class="container">
+                <small>EXPLORE WHAT AWAITS YOU</small>
+
+                <h1>
+                    Discover<br>
+                    <span>ADF2027</span>
+                </h1>
+
+                <p>
+                    Explore the organizations, creativity, and experiences
+                    that make the School of Computing unique.
+                </p>
+
+                <div class="cta">
+                    <a href="#highlights" class="btn">Explore Features</a>
+                    <a href="#event-gallery" class="btn ghost">View Gallery</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURED HIGHLIGHTS -->
+        <section id="highlights">
+            <div class="container">
+                <h2 class="title">What Makes ADF2027 Special?</h2>
+
+                <p class="sub">
+                    Discover the people, ideas, and experiences behind the event.
+                </p>
+
+                <div class="grid g3">
+
+                    <article class="paper feature-card">
+                        <div class="feature-symbol" aria-hidden="true">01</div>
+                        <h3>Student Organizations</h3>
+                        <p>
+                            Get to know the School of Computing organizations,
+                            discover their interests, and find a community
+                            where you can grow.
+                        </p>
+                        <a href="index.html#organizations" class="btn dark">
+                            Meet the Organizations
+                        </a>
+                    </article>
+
+                    <article class="paper feature-card">
+                        <div class="feature-symbol" aria-hidden="true">02</div>
+                        <h3>Technology and Creativity</h3>
+                        <p>
+                            Explore the different fields of computing through
+                            student creativity, technology, and projects.
+                        </p>
+                        <a href="services.html" class="btn dark">
+                            Explore Activities
+                        </a>
+                    </article>
+
+                    <article class="paper feature-card">
+                        <div class="feature-symbol" aria-hidden="true">03</div>
+                        <h3>Campus Experience</h3>
+                        <p>
+                            Discover the campus atmosphere, connect with
+                            students, and learn more about life at the
+                            School of Computing.
+                        </p>
+                        <a href="contact.html" class="btn dark">
+                            Ask About ADF2027
+                        </a>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMOTIONAL MATERIALS SECTION -->
+        <section class="section" id="promotional-materials">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">EXPLORE ADF2027</span>
+                    <h2>Promotional Materials</h2>
+                    <p>Explore our official posters, infographic, and event brochure.</p>
+                </div>
+
+                <div class="materials-grid">
+
+                    <!-- POSTER 1 -->
+                    <article class="material-card">
+                        <img
+                            src="public/images/poster_1.png"
+                            alt="ADF2027 Promotional Poster 1"
+                            loading="lazy"
+                        >
+                        <div class="material-content">
+                            <h3>ADF2027 Event Poster</h3>
+                            <p>Discover A Day with the Foxes 2027.</p>
+                            <a
+                                href="https://drive.google.com/file/d/1Jz9tkw7z4WVKrcv9wT6FhLn7bPS2YEou/view?usp=drive_link"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View Full Poster ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- POSTER 2 -->
+                    <article class="material-card">
+                        <img
+                            src="public/images/poster_2.png"
+                            alt="ADF2027 Promotional Poster 2"
+                            loading="lazy"
+                        >
+                        <div class="material-content">
+                            <h3>ADF2027 Event Poster</h3>
+                            <p>Take a closer look at our event promotion.</p>
+                            <a
+                                href="https://drive.google.com/file/d/1xDun-8lXyJ0Cl-JEorzYD4swc69JgEnU/view?usp=drive_link"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View Full Poster ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- INFOGRAPHIC -->
+                    <article class="material-card">
+                        <img
+                            src="public/images/infog.png"
+                            alt="ADF2027 Event Infographic"
+                            loading="lazy"
+                        >
+                        <div class="material-content">
+                            <h3>Event Infographic</h3>
+                            <p>Explore more information about ADF2027.</p>
+                            <a
+                                href="https://drive.google.com/file/d/1A20plhQCqO7_lGXE4wtmRxC05vekmJi8/view?usp=drive_link"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View Full Infographic ↗</a>
+                        </div>
+                    </article>
+
+                    <!-- BROCHURE -->
+                    <article class="material-card">
+                        <div class="brochure-preview">
+                            <img
+                                src="public/images/brochure_front.png"
+                                alt="ADF2027 Brochure Front Cover"
+                                loading="lazy"
+                            >
+                            <img
+                                src="public/images/brochure_back.png"
+                                alt="ADF2027 Brochure Back Cover"
+                                loading="lazy"
+                            >
+                        </div>
+                        <div class="material-content">
+                            <h3>ADF2027 Event Brochure</h3>
+                            <p>Browse the front and back of our event brochure.</p>
+                            <a
+                                href="https://drive.google.com/drive/folders/1NorZcZE8fv9XqtRbbVox3zgNEvhHvFPb?usp=drive_link"
+                                class="btn btn-primary"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                            >View Full Brochure ↗</a>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </section>
 
 
-<!-- B2. INTERACTIVE: flip cards -->
-<section id="orgs">
-  <div class="container">
-    <h2 class="title">Meet the Organizations</h2>
-    <p class="sub">Flip a card to learn more</p>
-    <div class="grid g4" id="flip-cards"></div>
-  </div>
-</section>
+        <!-- EVENT GALLERY SECTION -->
+        <section class="section gallery-section" id="event-gallery">
+            <div class="container">
+                <div class="section-heading">
+                    <span class="eyebrow">CAMPUS LIFE AND EXPERIENCES</span>
+                    <h2>ADF2027 Gallery</h2>
+                    <p>Explore moments, activities, and experiences from our
+                    School of Computing community.</p>
+                </div>
 
-<!-- B2. INTERACTIVE: schedule tabs -->
-<section>
-  <div class="container">
-    <h2 class="title">Event Schedule</h2>
-    <p class="sub">Tentative program</p>
-    <div class="tabs" id="sched-tabs">
-      <button class="chip on" data-t="d1">Day 1 · Feb 23</button>
-      <button class="chip" data-t="d2">Day 2 · Feb 24</button>
+                <div class="event-gallery-grid">
+                    <img src="public/images/4.jpg" alt="ADF2027 Gallery Image 1" loading="lazy">
+                    <img src="public/images/5.jpg" alt="ADF2027 Gallery Image 2" loading="lazy">
+                    <img src="public/images/6.jpg" alt="ADF2027 Gallery Image 3" loading="lazy">
+                    <img src="public/images/7.jpg" alt="ADF2027 Gallery Image 4" loading="lazy">
+                    <img src="public/images/8.jpg" alt="ADF2027 Gallery Image 5" loading="lazy">
+                    <img src="public/images/9.jpg" alt="ADF2027 Gallery Image 6" loading="lazy">
+                    <img src="public/images/10.jpg" alt="ADF2027 Gallery Image 7" loading="lazy">
+                    <img src="public/images/11.jpg" alt="ADF2027 Gallery Image 8" loading="lazy">
+                    <img src="public/images/12.jpg" alt="ADF2027 Gallery Image 9" loading="lazy">
+                    <img src="public/images/13.jpg" alt="ADF2027 Gallery Image 10" loading="lazy">
+                    <img src="public/images/14.jpg" alt="ADF2027 Gallery Image 11" loading="lazy">
+                    <img src="public/images/15.jpg" alt="ADF2027 Gallery Image 12" loading="lazy">
+                </div>
+
+                <div class="gallery-action">
+                    <a
+                        href="https://drive.google.com/drive/folders/1_VXyNXqpn1OGczSuT_DJ8b0agWtmIBDb?usp=drive_link"
+                        class="btn btn-primary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >View Full Gallery ↗</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FINAL CTA -->
+        <section>
+            <div class="container">
+                <div class="paper final-cta">
+                    <h2 class="title">Ready to Experience ADF2027?</h2>
+
+                    <p class="final-cta-text">
+                        Learn more about our activities or contact us
+                        for additional event information.
+                    </p>
+
+                    <a href="services.html" class="btn dark">
+                        Explore Activities
+                    </a>
+
+                    <a href="contact.html" class="btn ghost">
+                        Contact Us
+                    </a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    
+    <!-- IMAGE LIGHTBOX -->
+    <div id="image-lightbox" class="image-lightbox" aria-hidden="true">
+        <button id="lightbox-close" class="lightbox-close" aria-label="Close image">
+            &times;
+        </button>
+
+        <button id="lightbox-prev" class="lightbox-nav lightbox-prev" aria-label="Previous image">
+            &#10094;
+        </button>
+
+        <img id="lightbox-image" src="" alt="Enlarged preview">
+
+        <button id="lightbox-next" class="lightbox-nav lightbox-next" aria-label="Next image">
+            &#10095;
+        </button>
+
+        <p id="lightbox-caption"></p>
     </div>
-    <div class="paper tab-panel on" id="d1">
-      <div class="slot"><b>9:00 AM</b><span>Registration &amp; Welcome</span></div>
-      <div class="slot"><b>10:00 AM</b><span>Opening Program</span></div>
-      <div class="slot"><b>11:00 AM</b><span>Campus Tour</span></div>
-      <div class="slot"><b>1:00 PM</b><span>Org Booths Open</span></div>
-      <div class="slot"><b>3:00 PM</b><span>Games &amp; Giveaways</span></div>
-    </div>
-    <div class="paper tab-panel" id="d2">
-      <div class="slot"><b>9:00 AM</b><span>Tech Demos</span></div>
-      <div class="slot"><b>11:00 AM</b><span>Faculty Meet &amp; Greet</span></div>
-      <div class="slot"><b>1:00 PM</b><span>Mascot Photo Ops</span></div>
-      <div class="slot"><b>3:00 PM</b><span>Awarding &amp; Closing</span></div>
-    </div>
-  </div>
-</section>
 
-<!-- B2. INTERACTIVE: quiz -->
-<section>
-  <div class="container">
-    <h2 class="title">Which Org Fits You?</h2>
-    <p class="sub">Take the 4-question quiz</p>
-    <div class="paper quiz" id="quiz"></div>
-  </div>
-</section>
 
-<!-- B2. INTERACTIVE: FAQ -->
-<section>
-  <div class="container">
-    <h2 class="title">FAQ</h2>
-    <p class="sub">Quick answers</p>
-    <div class="faq">
-      <div class="faq-item"><button class="faq-q">Who can join A Day with the Foxes?</button><div class="faq-a">Students who want to experience HAU campus life and discover the School of Computing.</div></div>
-      <div class="faq-item"><button class="faq-q">Is there a registration fee?</button><div class="faq-a">Update this answer with the official details from the organizers.</div></div>
-      <div class="faq-item"><button class="faq-q">Where is the event held?</button><div class="faq-a">SJH Building, Academic Hall, Holy Angel University, Angeles City, Pampanga.</div></div>
-      <div class="faq-item"><button class="faq-q">How do I join an organization?</button><div class="faq-a">Visit the booths during the event or send us a message through the Contact page.</div></div>
-    </div>
-  </div>
-</section>
+    <!-- Shared footer -->
+    <div id="site-footer"></div>
 
-<div id="site-footer"></div>
-<script src="script.js"></script>
+    <script src="js/main.js"></script>
+
+    <!-- Gallery interaction -->
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const lightbox = document.getElementById("gallery-lightbox");
+            const preview = document.getElementById("gallery-preview");
+            const closeButton = document.getElementById("gallery-close");
+            const imageButtons = document.querySelectorAll(".gallery-image-button");
+
+            if (!lightbox || !preview || !closeButton) return;
+
+            let previousFocus = null;
+
+            function closeGallery() {
+                lightbox.classList.remove("active");
+                lightbox.setAttribute("aria-hidden", "true");
+                preview.src = "";
+                if (previousFocus) previousFocus.focus();
+            }
+
+            imageButtons.forEach(button => {
+                button.addEventListener("click", () => {
+                    const image = button.querySelector("img");
+                    const fullImage = button.dataset.fullImage;
+
+                    if (!fullImage || !image) return;
+
+                    previousFocus = button;
+                    preview.src = fullImage;
+                    preview.alt = image.alt;
+                    lightbox.classList.add("active");
+                    lightbox.setAttribute("aria-hidden", "false");
+                    closeButton.focus();
+                });
+            });
+
+            closeButton.addEventListener("click", closeGallery);
+
+            lightbox.addEventListener("click", event => {
+                if (event.target === lightbox) closeGallery();
+            });
+
+            document.addEventListener("keydown", event => {
+                if (event.key === "Escape" && lightbox.classList.contains("active")) {
+                    closeGallery();
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>

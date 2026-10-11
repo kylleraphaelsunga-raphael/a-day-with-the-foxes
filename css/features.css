@@ -1,0 +1,464 @@
+/* ========================================
+   ADF2027 FEATURES PAGE
+======================================== */
+
+/* SECTION SPACING */
+#highlights,
+#promotional-materials,
+#event-gallery {
+    padding: 80px 0;
+}
+
+#highlights,
+#promotional-materials {
+    background: #0d0d0d;
+}
+
+#event-gallery {
+    background: #141414;
+}
+
+/* SECTION HEADINGS */
+#highlights .title,
+.section-heading h2 {
+    color: #ffffff;
+    font-family: "Anton", sans-serif;
+    font-size: clamp(2rem, 4vw, 3rem);
+    letter-spacing: 1px;
+    margin: 0 0 16px;
+}
+
+#highlights .sub,
+.section-heading p {
+    color: #bdbdbd;
+    line-height: 1.7;
+    max-width: 680px;
+    margin: 0 auto 36px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading .eyebrow {
+    display: inline-block;
+    color: #f58220;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+/* FEATURE HIGHLIGHT CARDS */
+#highlights .grid {
+    align-items: stretch;
+    gap: 24px;
+}
+
+#highlights .feature-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    padding: 30px;
+    border: 1px solid #303030;
+    border-radius: 14px;
+    background: #191919;
+    color: #ffffff;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+#highlights .feature-card:hover {
+    transform: translateY(-5px);
+    border-color: #f58220;
+}
+
+.feature-symbol {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 22px;
+    border-radius: 10px;
+    background: #f58220;
+    color: #111111;
+    font-family: "Anton", sans-serif;
+    font-size: 1.4rem;
+}
+
+#highlights .feature-card h3 {
+    margin: 0 0 14px;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+#highlights .feature-card p {
+    flex-grow: 1;
+    margin: 0 0 24px;
+    color: #bdbdbd;
+    line-height: 1.8;
+}
+
+#highlights .feature-card .btn {
+    margin-top: auto;
+}
+
+
+#highlights h2.title {
+    text-align: center !important;
+    width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    transform: none !important;
+}
+
+
+/* PROMOTIONAL MATERIALS GRID */
+.materials-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+}
+
+.material-card {
+    min-width: 0;
+    overflow: hidden;
+    border: 1px solid #303030;
+    border-radius: 16px;
+    background: #191919;
+    color: #ffffff;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.material-card:hover {
+    transform: translateY(-4px);
+    border-color: #f58220;
+}
+
+.material-card > img {
+    display: block;
+    width: 100%;
+    height: 340px;
+    padding: 14px;
+    object-fit: contain;
+    background: #101010;
+}
+
+.material-content {
+    padding: 24px;
+}
+
+.material-content h3 {
+    margin: 0 0 10px;
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+
+.material-content p {
+    margin: 0 0 22px;
+    color: #bdbdbd;
+    line-height: 1.7;
+}
+
+/* BROCHURE FRONT AND BACK */
+.brochure-preview {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    padding: 14px;
+    background: #101010;
+}
+
+.brochure-preview img {
+    display: block;
+    width: 100%;
+    height: 312px;
+    object-fit: contain;
+}
+
+/* MATERIAL AND GALLERY BUTTONS */
+.material-card .btn,
+.gallery-action .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 12px 18px;
+    border: 1px solid #f58220;
+    border-radius: 6px;
+    background: #f58220;
+    color: #111111;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.material-card .btn:hover,
+.gallery-action .btn:hover {
+    background: #ff9b43;
+    transform: translateY(-2px);
+}
+
+/* EVENT GALLERY: 12 IMAGES */
+.event-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.event-gallery-grid img {
+    display: block;
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border: 1px solid #303030;
+    border-radius: 10px;
+    background: #1b1b1b;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.event-gallery-grid img:hover {
+    transform: scale(1.025);
+    border-color: #f58220;
+}
+
+.gallery-action {
+    display: flex;
+    justify-content: center;
+    margin-top: 36px;
+}
+
+/* FINAL CALL TO ACTION */
+.final-cta {
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.final-cta-text {
+    max-width: 600px;
+    margin: 0 auto 24px;
+    line-height: 1.8;
+}
+
+.final-cta .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin: 6px;
+}
+
+
+/* CLICKABLE IMAGES */
+.material-card > img,
+.brochure-preview img,
+.event-gallery-grid img {
+    cursor: zoom-in;
+}
+
+/* IMAGE LIGHTBOX */
+.image-lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0, 0, 0, 0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 70px 80px;
+}
+
+.image-lightbox.active {
+    display: flex;
+}
+
+#lightbox-image {
+    display: block;
+    max-width: 100%;
+    max-height: 78vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 6px;
+    cursor: zoom-out;
+}
+
+#lightbox-caption {
+    position: absolute;
+    bottom: 18px;
+    left: 70px;
+    right: 70px;
+    margin: 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.lightbox-close,
+.lightbox-nav {
+    position: absolute;
+    border: none;
+    color: #fff;
+    background: rgba(30, 30, 30, 0.8);
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s ease;
+}
+
+.lightbox-close:hover,
+.lightbox-nav:hover {
+    background: #f58220;
+    color: #111;
+}
+
+.lightbox-close {
+    top: 20px;
+    right: 28px;
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+    font-size: 32px;
+}
+
+.lightbox-nav {
+    top: 50%;
+    transform: translateY(-50%);
+    width: 46px;
+    height: 54px;
+    border-radius: 8px;
+    font-size: 22px;
+}
+
+.lightbox-prev {
+    left: 20px;
+}
+
+.lightbox-next {
+    right: 20px;
+}
+
+@media (max-width: 600px) {
+    .image-lightbox {
+        padding: 60px 48px;
+    }
+
+    #lightbox-image {
+        max-height: 72vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+
+    .lightbox-prev {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
+    }
+
+    #lightbox-caption {
+        left: 15px;
+        right: 15px;
+        bottom: 12px;
+    }
+}
+
+
+/* TABLETS */
+@media (max-width: 900px) {
+    #highlights,
+    #promotional-materials,
+    #event-gallery {
+        padding: 64px 0;
+    }
+
+    .materials-grid {
+        gap: 20px;
+    }
+
+    .event-gallery-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .event-gallery-grid img {
+        height: 200px;
+    }
+
+    .brochure-preview img {
+        height: 260px;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 600px) {
+    #highlights,
+    #promotional-materials,
+    #event-gallery {
+        padding: 48px 0;
+    }
+
+    .materials-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .event-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .event-gallery-grid img {
+        height: 170px;
+    }
+
+    .material-card > img {
+        height: 300px;
+    }
+
+    .brochure-preview img {
+        height: 230px;
+    }
+
+    .material-content {
+        padding: 20px;
+    }
+
+    .material-card .btn,
+    .gallery-action .btn {
+        width: 100%;
+    }
+
+    #highlights .feature-card {
+        padding: 24px;
+    }
+
+    .final-cta .btn {
+        width: 100%;
+        margin: 6px 0;
+    }
+}
+
+/* SMALL PHONES */
+@media (max-width: 380px) {
+    .event-gallery-grid img {
+        height: 135px;
+    }
+
+    .brochure-preview {
+        gap: 6px;
+        padding: 8px;
+    }
+
+    .brochure-preview img {
+        height: 190px;
+    }
+}
