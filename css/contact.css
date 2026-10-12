@@ -1,9 +1,5 @@
-
 /* =========================================
    ADF2027 CONTACT PAGE
-   File: css/contact.css
-   Shared header, hero, CTA, and footer:
-   css/style.css
 ========================================= */
 
 .contact-page-section {
@@ -37,7 +33,7 @@
     line-height: 1.2;
 }
 
-.contact-section-heading > p:last-child {
+.contact-section-heading>p:last-child {
     margin: 0;
     color: #666;
     font-size: 0.98rem;
@@ -89,7 +85,7 @@
 }
 
 .contact-card-heading h3,
-.contact-info-card > h3 {
+.contact-info-card>h3 {
     margin: 0 0 7px;
     color: #181818;
     font-size: 1.25rem;
@@ -177,7 +173,7 @@
     color: #fff;
 }
 
-.contact-info-card > h3 {
+.contact-info-card>h3 {
     color: #fff;
     font-size: 1.65rem;
 }
@@ -413,7 +409,7 @@
     color: #f58220;
 }
 
-.email-banner > p:last-child {
+.email-banner>p:last-child {
     margin: 0;
     color: #e0e0e0;
     font-size: 0.94rem;
@@ -446,7 +442,7 @@
     line-height: 1.85;
 }
 
-.email-content > p {
+.email-content>p {
     margin: 0 0 17px;
 }
 
@@ -613,7 +609,7 @@
     box-shadow: 0 12px 35px rgba(0, 0, 0, 0.06);
 }
 
-.hau-map-card > a:first-child {
+.hau-map-card>a:first-child {
     display: block;
     background: #f3f3f3;
 }
@@ -1018,6 +1014,7 @@ body.campus-map-open {
 /* REDUCE ANIMATION FOR ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
+
     .member,
     .member-details .placeholder {
         transition: none;

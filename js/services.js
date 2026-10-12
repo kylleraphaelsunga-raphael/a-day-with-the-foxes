@@ -95,7 +95,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     "p",
                     "",
                     activity.description ||
-                        "Discover more about this ADF2027 experience."
+                    "Discover more about this ADF2027 experience."
                 );
 
                 const availability = createElement(
@@ -142,40 +142,40 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-// Poster lightbox
-const posterImageButton = document.getElementById("open-poster");
-const posterTextButton = document.getElementById("open-poster-button");
-const posterLightbox = document.getElementById("poster-lightbox");
-const closePosterButton = document.getElementById("close-poster");
+    // Poster lightbox
+    const posterImageButton = document.getElementById("open-poster");
+    const posterTextButton = document.getElementById("open-poster-button");
+    const posterLightbox = document.getElementById("poster-lightbox");
+    const closePosterButton = document.getElementById("close-poster");
 
-function openPoster() {
-    posterLightbox.hidden = false;
-    document.body.style.overflow = "hidden";
-}
+    function openPoster() {
+        posterLightbox.hidden = false;
+        document.body.style.overflow = "hidden";
+    }
 
-function closePoster() {
-    posterLightbox.hidden = true;
-    document.body.style.overflow = "";
-}
+    function closePoster() {
+        posterLightbox.hidden = true;
+        document.body.style.overflow = "";
+    }
 
-if (posterLightbox && closePosterButton) {
-    posterImageButton?.addEventListener("click", openPoster);
-    posterTextButton?.addEventListener("click", openPoster);
+    if (posterLightbox && closePosterButton) {
+        posterImageButton?.addEventListener("click", openPoster);
+        posterTextButton?.addEventListener("click", openPoster);
 
-    closePosterButton.addEventListener("click", closePoster);
+        closePosterButton.addEventListener("click", closePoster);
 
-    posterLightbox.addEventListener("click", (event) => {
-        if (event.target === posterLightbox) {
-            closePoster();
-        }
-    });
+        posterLightbox.addEventListener("click", (event) => {
+            if (event.target === posterLightbox) {
+                closePoster();
+            }
+        });
 
-    document.addEventListener("keydown", (event) => {
-        if (event.key === "Escape" && !posterLightbox.hidden) {
-            closePoster();
-        }
-    });
-}
+        document.addEventListener("keydown", (event) => {
+            if (event.key === "Escape" && !posterLightbox.hidden) {
+                closePoster();
+            }
+        });
+    }
 
     // ========================================
     // SHOW OR HIDE DATASETS

@@ -1,7 +1,5 @@
 /* ========================================
    ADF2027 SERVICES PAGE
-   Content sections only
-   Excludes hero, site header, CTA and footer
 ======================================== */
 
 /* Theme variables */
@@ -138,7 +136,7 @@
     line-height: 1.35;
 }
 
-.services-page .services-service-card > p {
+.services-page .services-service-card>p {
     margin: 0 0 16px;
     color: #626262;
     font-size: 0.94rem;
@@ -192,6 +190,7 @@
     text-align: center;
     line-height: 1.7;
 }
+
 /* ========================================
    FIX: CENTER ACTIVITY NAVIGATION BUTTONS
 ======================================== */
@@ -254,6 +253,7 @@
 
 /* Mobile spacing */
 @media (max-width: 600px) {
+
     .services-page .services-list-section .cta,
     .services-page .services-list-section .services-actions {
         flex-direction: column;
@@ -277,7 +277,6 @@
     margin: 12px auto 0;
 }
 
-```css
 /* Clickable poster */
 .services-page .services-poster-click {
     display: block;
@@ -343,7 +342,6 @@
 .services-page #open-poster-button {
     cursor: pointer;
 }
-```
 
 /* ========================================
    API AND DATA INTEGRATION
@@ -368,7 +366,7 @@
     font-weight: 800;
 }
 
-.services-page .services-api-panel > p {
+.services-page .services-api-panel>p {
     margin: 0 0 24px;
     color: var(--services-muted);
     font-size: 0.94rem;
@@ -732,6 +730,7 @@
 
 /* Accessibility: reduce motion when requested */
 @media (prefers-reduced-motion: reduce) {
+
     .services-page *,
     .services-page *::before,
     .services-page *::after {

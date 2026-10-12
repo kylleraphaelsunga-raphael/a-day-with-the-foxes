@@ -1,9 +1,6 @@
-
 /* ========================================
    ADF2027 FEATURES PAGE
-   WHITE, BEIGE, ORANGE, AND CHARCOAL THEME
 ======================================== */
-
 
 /* ========================================
    SECTION SPACING AND BACKGROUNDS
@@ -162,7 +159,7 @@
     border-color: #f58220;
 }
 
-.material-card > img {
+.material-card>img {
     display: block;
     width: 100%;
     height: 340px;
@@ -274,7 +271,7 @@
    CLICKABLE IMAGES
 ======================================== */
 
-.material-card > img,
+.material-card>img,
 .brochure-preview img,
 .event-gallery-grid img {
     cursor: zoom-in;
@@ -426,7 +423,7 @@
         height: 170px;
     }
 
-    .material-card > img {
+    .material-card>img {
         height: 300px;
     }
 

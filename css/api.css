@@ -1,11 +1,3 @@
-
-/* =========================
-   ADF2027 API & DATA INTEGRATION
-   Content sections only
-   Does not modify shared header,
-   hero, CTA, or footer styles
-   ========================= */
-
 /* =========================
    API INTRODUCTION
    ========================= */
@@ -278,7 +270,7 @@
    API REQUEST PROCESS
    ========================= */
 
-main > section .paper:not(.api-panel) {
+main>section .paper:not(.api-panel) {
     padding: 30px;
     background: #ffffff;
     border: 1px solid #e8dfd2;
@@ -286,13 +278,13 @@ main > section .paper:not(.api-panel) {
     box-shadow: 0 5px 20px rgba(40, 30, 15, 0.05);
 }
 
-main > section .paper:not(.api-panel) > p {
+main>section .paper:not(.api-panel)>p {
     margin: 0;
     color: #555555;
     line-height: 1.8;
 }
 
-main > section .paper:not(.api-panel) > p strong {
+main>section .paper:not(.api-panel)>p strong {
     color: #8b470c;
     font-weight: 700;
 }
@@ -320,8 +312,8 @@ main > section .paper:not(.api-panel) > p strong {
    DATASET PROCESS TEXT
    ========================= */
 
-#services-data .paper > p,
-#customers-data .paper > p {
+#services-data .paper>p,
+#customers-data .paper>p {
     line-height: 1.7;
 }
 
@@ -356,7 +348,7 @@ main > section .paper:not(.api-panel) > p strong {
         width: 100%;
     }
 
-    main > section .paper:not(.api-panel) {
+    main>section .paper:not(.api-panel) {
         padding: 24px;
     }
 
@@ -402,7 +394,7 @@ main > section .paper:not(.api-panel) > p strong {
         min-width: 560px;
     }
 
-    main > section .paper:not(.api-panel) {
+    main>section .paper:not(.api-panel) {
         padding: 18px;
     }
 

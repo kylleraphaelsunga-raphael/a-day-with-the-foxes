@@ -245,10 +245,14 @@ function mountFooter() {
         <footer class="footer">
             <div class="container footer-grid">
 
-                <!-- FOOTER BRAND -->
-                <div class="footer-brand">
-                    <a class="brand" href="index.html">
-                        <span class="brand-icon" aria-hidden="true">🦊</span>
+                        <!-- FOOTER BRAND -->
+                        <div class="footer-brand">
+                            <a class="brand" href="index.html">
+                                <img
+                                    class="brand-icon"
+                                    src="public/images/favicon.png"
+                                    alt="ADF2027 Logo"
+                                >
                         <span class="brand-text">
                             <strong>ADF2027</strong>
                             <small>A DAY WITH THE FOXES</small>
@@ -297,7 +301,7 @@ function mountFooter() {
                             aria-label="Holy Angel University Facebook"
                         >
                             <img
-                                src="https://european-experiences.com/wp-content/uploads/2024/01/Facebook_Logo_Primary.png"
+                                src="public/images/fb.png"
                                 alt="Facebook"
                             >
                         </a>
@@ -309,7 +313,7 @@ function mountFooter() {
                             aria-label="Holy Angel University Instagram"
                         >
                             <img
-                                src="https://tse1.mm.bing.net/th/id/OIP.pYHsG5OTS9o560bpL93jvgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                src="public/images/ig.png"
                                 alt="Instagram"
                             >
                         </a>
@@ -328,7 +332,7 @@ function mountFooter() {
                             aria-label="School of Computing Facebook"
                         >
                             <img
-                                src="https://european-experiences.com/wp-content/uploads/2024/01/Facebook_Logo_Primary.png"
+                                src="public/images/fb.png"
                                 alt="Facebook"
                             >
                         </a>
@@ -340,7 +344,7 @@ function mountFooter() {
                             aria-label="School of Computing Instagram"
                         >
                             <img
-                                src="https://tse1.mm.bing.net/th/id/OIP.pYHsG5OTS9o560bpL93jvgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                src="public/images/ig.png"
                                 alt="Instagram"
                             >
                         </a>
