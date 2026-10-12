@@ -1,0 +1,743 @@
+/* ========================================
+   ADF2027 SERVICES PAGE
+   Content sections only
+   Excludes hero, site header, CTA and footer
+======================================== */
+
+/* Theme variables */
+.services-page {
+    --services-black: #111111;
+    --services-dark: #1b1b1b;
+    --services-orange: #ff7900;
+    --services-orange-light: #ff9b38;
+    --services-white: #ffffff;
+    --services-paper: #f7f6f3;
+    --services-muted: #737373;
+    --services-border: #e7e4df;
+}
+
+/* General content spacing */
+.services-page .section {
+    padding-top: 76px;
+    padding-bottom: 76px;
+}
+
+.services-page .section-inner {
+    width: min(1180px, 92%);
+    margin-inline: auto;
+}
+
+.services-page .section-heading {
+    max-width: 760px;
+    margin: 0 auto 42px;
+    text-align: center;
+}
+
+.services-page .section-heading h2 {
+    margin: 0 0 14px;
+    color: var(--services-black);
+    font-family: "Anton", sans-serif;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: 0.3px;
+}
+
+.services-page .section-heading p {
+    margin: 0;
+    color: var(--services-muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.services-page .services-eyebrow {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: var(--services-orange);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+/* ========================================
+   ACTIVITIES AND SERVICES
+======================================== */
+
+.services-page .services-list-section {
+    background: var(--services-paper);
+}
+
+.services-page #services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    align-items: stretch;
+}
+
+.services-page .services-service-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    padding: 30px;
+    overflow: hidden;
+    background: var(--services-white);
+    border: 1px solid var(--services-border);
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 3%);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.services-page .services-service-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: var(--services-orange);
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.services-page .services-service-card:hover {
+    transform: translateY(-6px);
+    border-color: #ffd0a6;
+    box-shadow: 0 16px 35px rgb(0 0 0 / 8%);
+}
+
+.services-page .services-service-card:hover::before {
+    transform: scaleX(1);
+}
+
+.services-page .services-service-category {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 7px 11px;
+    color: #a94e00;
+    background: #fff0e3;
+    border-radius: 5px;
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    line-height: 1.4;
+    text-transform: uppercase;
+}
+
+.services-page .services-service-card h3 {
+    margin: 0 0 13px;
+    color: var(--services-black);
+    font-size: 1.3rem;
+    font-weight: 800;
+    line-height: 1.35;
+}
+
+.services-page .services-service-card > p {
+    margin: 0 0 16px;
+    color: #626262;
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.services-page .services-service-card .services-service-availability {
+    margin-top: auto;
+    margin-bottom: 22px;
+    padding-top: 14px;
+    color: var(--services-muted);
+    border-top: 1px solid var(--services-border);
+    font-size: 0.82rem;
+    line-height: 1.6;
+}
+
+.services-page .services-service-card .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    margin-top: 0;
+    padding: 12px 19px;
+    color: var(--services-white);
+    background: var(--services-black);
+    border: 1px solid var(--services-black);
+    border-radius: 7px;
+    font-size: 0.84rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.services-page .services-service-card .btn:hover {
+    background: var(--services-orange);
+    border-color: var(--services-orange);
+    transform: translateY(-2px);
+}
+
+.services-page .services-loading {
+    grid-column: 1 / -1;
+    padding: 35px 20px;
+    color: var(--services-muted);
+    background: var(--services-white);
+    border: 1px dashed var(--services-border);
+    border-radius: 12px;
+    text-align: center;
+    line-height: 1.7;
+}
+/* ========================================
+   FIX: CENTER ACTIVITY NAVIGATION BUTTONS
+======================================== */
+
+.services-page .services-list-section .cta,
+.services-page .services-list-section .services-actions {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+    width: 100%;
+    margin: 30px auto 0;
+    text-align: center;
+}
+
+/* Make both navigation buttons easy to see */
+.services-page .services-list-section .cta a,
+.services-page .services-list-section .services-actions a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    padding: 13px 22px;
+    border: 2px solid #ff7900;
+    border-radius: 7px;
+    background: #ff7900;
+    color: #ffffff !important;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.services-page .services-list-section .cta a:hover,
+.services-page .services-list-section .services-actions a:hover {
+    background: #111111;
+    border-color: #111111;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   FIX: CENTER OFFICIAL WEBSITE CAMPAIGN LINK
+======================================== */
+
+.services-page .services-campaign-copy {
+    text-align: center;
+}
+
+.services-page .services-campaign-copy .btn {
+    margin: 12px auto 0;
+}
+
+/* Keep campaign text readable and centered */
+.services-page .services-campaign-copy p,
+.services-page .services-campaign-copy .services-eyebrow {
+    text-align: center;
+}
+
+/* Mobile spacing */
+@media (max-width: 600px) {
+    .services-page .services-list-section .cta,
+    .services-page .services-list-section .services-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .services-page .services-list-section .cta a,
+    .services-page .services-list-section .services-actions a {
+        width: 100%;
+    }
+}
+
+.services-page .services-campaign-footer {
+    text-align: center;
+}
+
+.services-page .services-campaign-footer .btn {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    margin: 12px auto 0;
+}
+
+```css
+/* Clickable poster */
+.services-page .services-poster-click {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: zoom-in;
+}
+
+.services-page .services-poster-click img {
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.services-page .services-poster-click:hover img {
+    transform: scale(1.02);
+}
+
+/* Enlarged poster overlay */
+.poster-lightbox[hidden] {
+    display: none;
+}
+
+.poster-lightbox {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    background: rgb(0 0 0 / 90%);
+    cursor: zoom-out;
+}
+
+.poster-lightbox-image {
+    max-width: 90vw;
+    max-height: 88vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 8px;
+    cursor: default;
+}
+
+.poster-lightbox-close {
+    position: absolute;
+    top: 18px;
+    right: 24px;
+    width: 46px;
+    height: 46px;
+    border: 0;
+    border-radius: 50%;
+    background: #ff7900;
+    color: #ffffff;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.services-page #open-poster-button {
+    cursor: pointer;
+}
+```
+
+/* ========================================
+   API AND DATA INTEGRATION
+======================================== */
+
+.services-page .services-api-section {
+    background: var(--services-white);
+}
+
+.services-page .services-api-panel {
+    padding: clamp(22px, 4vw, 42px);
+    background: #fbfaf8;
+    border: 1px solid var(--services-border);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgb(0 0 0 / 4%);
+}
+
+.services-page .services-api-panel h3 {
+    margin: 0 0 10px;
+    color: var(--services-black);
+    font-size: 1.45rem;
+    font-weight: 800;
+}
+
+.services-page .services-api-panel > p {
+    margin: 0 0 24px;
+    color: var(--services-muted);
+    font-size: 0.94rem;
+    line-height: 1.8;
+}
+
+.services-page .services-api-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 22px;
+}
+
+.services-page .services-api-actions button,
+.services-page #show-services-dataset,
+.services-page #show-customers-dataset {
+    min-height: 46px;
+    padding: 12px 18px;
+    color: var(--services-white);
+    background: var(--services-black);
+    border: 1px solid var(--services-black);
+    border-radius: 7px;
+    font-family: inherit;
+    font-size: 0.87rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.services-page .services-api-actions button:hover,
+.services-page #show-services-dataset:hover,
+.services-page #show-customers-dataset:hover {
+    background: var(--services-orange);
+    border-color: var(--services-orange);
+    transform: translateY(-2px);
+}
+
+.services-page .services-api-actions button:focus-visible,
+.services-page #show-services-dataset:focus-visible,
+.services-page #show-customers-dataset:focus-visible {
+    outline: 3px solid rgb(255 121 0 / 35%);
+    outline-offset: 3px;
+}
+
+.services-page #dataset-feedback {
+    margin: 0 0 22px;
+    padding: 13px 16px;
+    color: #555555;
+    background: #f0efec;
+    border-left: 4px solid var(--services-orange);
+    border-radius: 5px;
+    font-size: 0.88rem;
+    line-height: 1.7;
+    overflow-wrap: anywhere;
+}
+
+.services-page #dataset-results {
+    margin-top: 25px;
+}
+
+.services-page #dataset-title {
+    margin: 0 0 8px;
+    color: var(--services-black);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.services-page #dataset-description {
+    margin: 0 0 18px;
+    color: var(--services-muted);
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
+
+.services-page .services-api-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    border: 1px solid var(--services-border);
+    border-radius: 10px;
+    background: var(--services-white);
+}
+
+.services-page #dataset-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.services-page #dataset-table th {
+    padding: 15px 17px;
+    color: var(--services-white);
+    background: var(--services-dark);
+    font-size: 0.8rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
+    white-space: nowrap;
+}
+
+.services-page #dataset-table td {
+    padding: 14px 17px;
+    color: #454545;
+    border-bottom: 1px solid #eeece8;
+    font-size: 0.88rem;
+    line-height: 1.65;
+    overflow-wrap: anywhere;
+}
+
+.services-page #dataset-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.services-page #dataset-table tbody tr:hover {
+    background: #fff7f0;
+}
+
+.services-page #dataset-table td[colspan] {
+    padding: 25px;
+    color: var(--services-muted);
+    text-align: center;
+}
+
+/* Optional JSON response area, if included in the HTML */
+.services-page #services-json-output {
+    margin-top: 20px;
+    overflow: hidden;
+    border: 1px solid var(--services-border);
+    border-radius: 10px;
+}
+
+.services-page #services-json-content {
+    max-height: 420px;
+    margin: 0;
+    padding: 20px;
+    overflow: auto;
+    color: #f5f5f5;
+    background: #171717;
+    font-family: Consolas, "Courier New", monospace;
+    font-size: 0.82rem;
+    line-height: 1.7;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+}
+
+/* ========================================
+   SOCIAL MEDIA CAMPAIGN
+======================================== */
+
+.services-page .services-social-section {
+    background: var(--services-paper);
+}
+
+.services-page .services-campaign-objective {
+    margin-bottom: 30px;
+    padding: clamp(22px, 3vw, 32px);
+    background: var(--services-white);
+    border: 1px solid var(--services-border);
+    border-radius: 14px;
+}
+
+.services-page .services-campaign-objective h3 {
+    margin: 0 0 12px;
+    color: var(--services-black);
+    font-size: 1.25rem;
+    font-weight: 800;
+}
+
+.services-page .services-campaign-objective p {
+    margin: 0;
+    color: #626262;
+    font-size: 0.94rem;
+    line-height: 1.85;
+}
+
+.services-page .services-campaign-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 20px;
+}
+
+.services-page .services-campaign-tags span {
+    display: inline-flex;
+    align-items: center;
+    padding: 8px 12px;
+    color: #854000;
+    background: #fff0e3;
+    border: 1px solid #ffe0c4;
+    border-radius: 999px;
+    font-size: 0.77rem;
+    font-weight: 700;
+}
+
+.services-page .services-main-campaign {
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+    gap: clamp(25px, 4vw, 48px);
+    align-items: center;
+    padding: clamp(22px, 4vw, 42px);
+    background: var(--services-white);
+    border: 1px solid var(--services-border);
+    border-radius: 18px;
+    box-shadow: 0 10px 35px rgb(0 0 0 / 4%);
+}
+
+.services-page .services-poster {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    min-height: 300px;
+    overflow: hidden;
+    background: #ece9e4;
+    border-radius: 12px;
+}
+
+.services-page .services-poster img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 620px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.services-page .services-campaign-copy {
+    min-width: 0;
+    padding: 8px 0;
+}
+
+.services-page .services-campaign-copy .services-eyebrow {
+    margin-bottom: 14px;
+}
+
+.services-page .services-campaign-copy h3 {
+    margin: 0 0 18px;
+    color: var(--services-black);
+    font-family: "Anton", sans-serif;
+    font-size: clamp(1.8rem, 3vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.12;
+}
+
+.services-page .services-campaign-copy p {
+    margin: 0 0 16px;
+    color: #626262;
+    font-size: 0.95rem;
+    line-height: 1.85;
+}
+
+.services-page .services-campaign-copy .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+    margin-top: 8px;
+    padding: 13px 21px;
+    color: var(--services-white);
+    background: var(--services-orange);
+    border: 1px solid var(--services-orange);
+    border-radius: 7px;
+    font-size: 0.86rem;
+    font-weight: 800;
+    text-decoration: none;
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.services-page .services-campaign-copy .btn:hover {
+    background: var(--services-black);
+    border-color: var(--services-black);
+    transform: translateY(-2px);
+}
+
+/* ========================================
+   RESPONSIVE LAYOUT
+======================================== */
+
+@media (max-width: 950px) {
+    .services-page #services-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .services-page .services-main-campaign {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .services-page .services-poster {
+        min-height: 250px;
+    }
+
+    .services-page .services-poster img {
+        max-height: 560px;
+    }
+}
+
+@media (max-width: 600px) {
+    .services-page .section {
+        padding-top: 52px;
+        padding-bottom: 52px;
+    }
+
+    .services-page .section-heading {
+        margin-bottom: 28px;
+        text-align: left;
+    }
+
+    .services-page #services-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 17px;
+    }
+
+    .services-page .services-service-card {
+        padding: 24px;
+        border-radius: 12px;
+    }
+
+    .services-page .services-api-panel {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .services-page .services-api-actions {
+        flex-direction: column;
+    }
+
+    .services-page .services-api-actions button,
+    .services-page #show-services-dataset,
+    .services-page #show-customers-dataset {
+        width: 100%;
+    }
+
+    .services-page .services-main-campaign {
+        gap: 22px;
+        padding: 17px;
+        border-radius: 13px;
+    }
+
+    .services-page .services-poster {
+        min-height: 180px;
+    }
+
+    .services-page .services-poster img {
+        max-height: 460px;
+    }
+
+    .services-page .services-campaign-copy h3 {
+        font-size: 2rem;
+    }
+
+    .services-page #dataset-table th,
+    .services-page #dataset-table td {
+        padding: 12px;
+        font-size: 0.8rem;
+    }
+}
+
+/* Accessibility: reduce motion when requested */
+@media (prefers-reduced-motion: reduce) {
+    .services-page *,
+    .services-page *::before,
+    .services-page *::after {
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+}

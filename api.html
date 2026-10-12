@@ -1,0 +1,437 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0d0d0d">
+    <meta name="description" content="Explore the ADF2027 API integration demonstration featuring services and sample customer records retrieved through GET endpoints.">
+
+    <title>API and Data Integration | ADF2027</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Shared website styles -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- API page styles -->
+    <link rel="stylesheet" href="css/api.css">
+</head>
+
+<body>
+
+    <!-- Shared Header -->
+    <div id="site-header"></div>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <section class="hero">
+            <div class="container">
+                <small>PART IV · PROJECT DATA INTEGRATION</small>
+
+                <h1>
+                    API &amp; Data<br>
+                    <span>Integration</span>
+                </h1>
+
+                <p>
+                    Explore how ADF2027 retrieves and displays service
+                    information and sample customer records through REST API
+                    GET requests.
+                </p>
+
+                <div class="cta" style="margin-top:25px;">
+                    <a href="#services-data" class="btn">View Services Data</a>
+                    <a href="#customers-data" class="btn ghost">View Customer Data</a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- INTRODUCTION -->
+        <section>
+            <div class="container">
+
+                <h2 class="title">How the Integration Works</h2>
+
+                <p class="sub">Retrieve. Process. Display.</p>
+
+                <div class="api-intro">
+                    <p>
+                        This page demonstrates basic data integration using
+                        a Node.js and Express backend. The application retrieves
+                        JSON datasets through API endpoints and displays the
+                        returned records on the website.
+                    </p>
+                </div>
+
+                <div class="grid g3">
+
+                    <article class="paper svc">
+                        <h3>Dataset 1</h3>
+                        <p>
+                            Service records containing names, descriptions,
+                            categories, availability, and action links.
+                        </p>
+                    </article>
+
+                    <article class="paper svc">
+                        <h3>Dataset 2</h3>
+                        <p>
+                            Fictional sample customer records used to
+                            demonstrate retrieving and displaying customer data.
+                        </p>
+                    </article>
+
+                    <article class="paper svc">
+                        <h3>GET Requests</h3>
+                        <p>
+                            Fetch requests retrieve data from the Express API
+                            and update the page without manually entering
+                            each record into the HTML.
+                        </p>
+                    </article>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DATASET 1: SERVICES -->
+        <section id="services-data">
+            <div class="container">
+
+                <h2 class="title">Dataset 1: Services</h2>
+
+                <p class="sub">ADF2027 Activities and Experiences</p>
+
+                <div class="paper api-panel">
+
+                    <h3>Services API</h3>
+
+                    <p class="api-description">
+                        Retrieves the activities and experiences listed in
+                        the ADF2027 services dataset.
+                    </p>
+
+                    <div class="api-meta">
+                        <span class="api-method">GET</span>
+                        <code class="api-endpoint">/api/services</code>
+                    </div>
+
+                    <p id="services-status" class="api-status" aria-live="polite">
+                        Loading services data...
+                    </p>
+
+                    <div class="api-table-wrap">
+                        <table class="api-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Service</th>
+                                    <th>Description</th>
+                                    <th>Category</th>
+                                    <th>Availability</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="services-table-body">
+                                <tr>
+                                    <td colspan="5">Loading records...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="api-note">
+                        Total records retrieved:
+                        <span id="services-count" class="api-count">0</span>
+                    </p>
+
+                    <div class="api-actions">
+                        <button type="button" id="refresh-services" class="btn">
+                            Refresh Services
+                        </button>
+
+                        <a href="services.html" class="btn ghost">
+                            View Services Page
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- DATASET 2: CUSTOMERS -->
+        <section id="customers-data">
+            <div class="container">
+
+                <h2 class="title">Dataset 2: Customer Information</h2>
+
+                <p class="sub">Sample Visitor Records</p>
+
+                <div class="paper api-panel">
+
+                    <h3>Customer API</h3>
+
+                    <p class="api-description">
+                        Retrieves fictional sample customer records to
+                        demonstrate customer information data retrieval.
+                        These records are examples, not actual visitor submissions.
+                    </p>
+
+                    <div class="api-meta">
+                        <span class="api-method">GET</span>
+                        <code class="api-endpoint">/api/customers</code>
+                    </div>
+
+                    <p id="customers-status" class="api-status" aria-live="polite">
+                        Loading customer data...
+                    </p>
+
+                    <div class="api-table-wrap">
+                        <table class="api-table">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Customer Name</th>
+                                    <th>Email Address</th>
+                                    <th>Subject</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="customers-table-body">
+                                <tr>
+                                    <td colspan="5">Loading records...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <p class="api-note">
+                        Total records retrieved:
+                        <span id="customers-count" class="api-count">0</span>
+                    </p>
+
+                    <div class="api-actions">
+                        <button type="button" id="refresh-customers" class="btn">
+                            Refresh Customer Data
+                        </button>
+
+                        <a href="contact.html" class="btn ghost">
+                            Visit Contact Page
+                        </a>
+                    </div>
+
+                </div>
+
+            </div>
+        </section>
+
+
+        <!-- API PROCESS -->
+        <section>
+            <div class="container">
+
+                <h2 class="title">API Request Process</h2>
+
+                <p class="sub">From the Dataset to the Website</p>
+
+                <div class="paper">
+
+                    <p>
+                        <strong>1. Data source:</strong>
+                        The records are stored in JSON files in the project's
+                        data folder.
+                    </p>
+
+                    <p style="margin-top:15px;">
+                        <strong>2. Backend:</strong>
+                        Express reads the JSON files and provides GET endpoints.
+                    </p>
+
+                    <p style="margin-top:15px;">
+                        <strong>3. Request:</strong>
+                        The frontend uses JavaScript fetch requests to call
+                        the endpoints.
+                    </p>
+
+                    <p style="margin-top:15px;">
+                        <strong>4. Response:</strong>
+                        The backend returns JSON data, which the frontend
+                        processes and displays in tables.
+                    </p>
+
+                    <div class="api-code">
+                        fetch("/api/services")<br>
+                        fetch("/api/customers")
+                    </div>
+
+                    <p class="api-note">
+                        This implementation demonstrates GET data retrieval.
+                        It does not create, update, or delete customer records.
+                    </p>
+
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Shared Footer -->
+    <div id="site-footer"></div>
+
+    <!-- Shared Website JavaScript -->
+    <script src="js/main.js"></script>
+
+    <!-- API Data Retrieval -->
+    <script>
+        // Escape text before inserting API values into the page.
+        function escapeHTML(value) {
+            return String(value ?? "").replace(/[&<>"']/g, character => ({
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#39;"
+            })[character]);
+        }
+
+        // Retrieve and display services.
+        async function loadServicesData() {
+            const status = document.getElementById("services-status");
+            const tableBody = document.getElementById("services-table-body");
+            const count = document.getElementById("services-count");
+
+            status.textContent = "Loading services data...";
+            status.classList.remove("api-error");
+            tableBody.innerHTML =
+                '<tr><td colspan="5">Loading records...</td></tr>';
+
+            try {
+                const response = await fetch("/api/services");
+
+                if (!response.ok) {
+                    throw new Error("The services API returned an error.");
+                }
+
+                const result = await response.json();
+
+                if (!result.success || !Array.isArray(result.data)) {
+                    throw new Error("The services response is invalid.");
+                }
+
+                count.textContent = result.data.length;
+
+                if (result.data.length === 0) {
+                    tableBody.innerHTML =
+                        '<tr><td colspan="5">No service records found.</td></tr>';
+                } else {
+                    tableBody.innerHTML = result.data.map(service => `
+                        <tr>
+                            <td>${escapeHTML(service.id)}</td>
+                            <td>${escapeHTML(service.name)}</td>
+                            <td>${escapeHTML(service.description)}</td>
+                            <td>${escapeHTML(service.category)}</td>
+                            <td>${escapeHTML(service.availability)}</td>
+                        </tr>
+                    `).join("");
+                }
+
+                status.textContent =
+                    "Services data retrieved successfully.";
+
+            } catch (error) {
+                console.error("Services API error:", error);
+
+                count.textContent = "0";
+                status.textContent =
+                    "Unable to load services. Check that the server is running.";
+                status.classList.add("api-error");
+
+                tableBody.innerHTML =
+                    '<tr><td colspan="5">Could not retrieve service records.</td></tr>';
+            }
+        }
+
+        // Retrieve and display sample customer records.
+        async function loadCustomersData() {
+            const status = document.getElementById("customers-status");
+            const tableBody = document.getElementById("customers-table-body");
+            const count = document.getElementById("customers-count");
+
+            status.textContent = "Loading customer data...";
+            status.classList.remove("api-error");
+            tableBody.innerHTML =
+                '<tr><td colspan="5">Loading records...</td></tr>';
+
+            try {
+                const response = await fetch("/api/customers");
+
+                if (!response.ok) {
+                    throw new Error("The customers API returned an error.");
+                }
+
+                const result = await response.json();
+
+                if (!result.success || !Array.isArray(result.data)) {
+                    throw new Error("The customers response is invalid.");
+                }
+
+                count.textContent = result.data.length;
+
+                if (result.data.length === 0) {
+                    tableBody.innerHTML =
+                        '<tr><td colspan="5">No customer records found.</td></tr>';
+                } else {
+                    tableBody.innerHTML = result.data.map(customer => `
+                        <tr>
+                            <td>${escapeHTML(customer.id)}</td>
+                            <td>${escapeHTML(customer.name)}</td>
+                            <td>${escapeHTML(customer.email)}</td>
+                            <td>${escapeHTML(customer.subject)}</td>
+                            <td>${escapeHTML(customer.status)}</td>
+                        </tr>
+                    `).join("");
+                }
+
+                status.textContent =
+                    "Customer data retrieved successfully. Sample records only.";
+
+            } catch (error) {
+                console.error("Customer API error:", error);
+
+                count.textContent = "0";
+                status.textContent =
+                    "Unable to load customer data. Check that the server is running.";
+                status.classList.add("api-error");
+
+                tableBody.innerHTML =
+                    '<tr><td colspan="5">Could not retrieve customer records.</td></tr>';
+            }
+        }
+
+        // Refresh buttons.
+        document.getElementById("refresh-services")
+            .addEventListener("click", loadServicesData);
+
+        document.getElementById("refresh-customers")
+            .addEventListener("click", loadCustomersData);
+
+        // Load both datasets when the page opens.
+        document.addEventListener("DOMContentLoaded", () => {
+            loadServicesData();
+            loadCustomersData();
+        });
+    </script>
+
+</body>
+</html>

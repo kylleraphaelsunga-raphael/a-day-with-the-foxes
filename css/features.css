@@ -1,8 +1,14 @@
+
 /* ========================================
    ADF2027 FEATURES PAGE
+   WHITE, BEIGE, ORANGE, AND CHARCOAL THEME
 ======================================== */
 
-/* SECTION SPACING */
+
+/* ========================================
+   SECTION SPACING AND BACKGROUNDS
+======================================== */
+
 #highlights,
 #promotional-materials,
 #event-gallery {
@@ -10,18 +16,22 @@
 }
 
 #highlights,
-#promotional-materials {
-    background: #0d0d0d;
-}
-
 #event-gallery {
-    background: #141414;
+    background: #ffffff;
 }
 
-/* SECTION HEADINGS */
+#promotional-materials {
+    background: #f5f0e8;
+}
+
+
+/* ========================================
+   SECTION HEADINGS
+======================================== */
+
 #highlights .title,
 .section-heading h2 {
-    color: #ffffff;
+    color: #222222;
     font-family: "Anton", sans-serif;
     font-size: clamp(2rem, 4vw, 3rem);
     letter-spacing: 1px;
@@ -30,7 +40,7 @@
 
 #highlights .sub,
 .section-heading p {
-    color: #bdbdbd;
+    color: #666666;
     line-height: 1.7;
     max-width: 680px;
     margin: 0 auto 36px;
@@ -50,7 +60,11 @@
     margin-bottom: 12px;
 }
 
-/* FEATURE HIGHLIGHT CARDS */
+
+/* ========================================
+   FEATURE HIGHLIGHT CARDS
+======================================== */
+
 #highlights .grid {
     align-items: stretch;
     gap: 24px;
@@ -62,10 +76,10 @@
     align-items: flex-start;
     height: 100%;
     padding: 30px;
-    border: 1px solid #303030;
+    border: 1px solid #e8dfd2;
     border-radius: 14px;
-    background: #191919;
-    color: #ffffff;
+    background: #f8f5ef;
+    color: #222222;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -90,14 +104,14 @@
 
 #highlights .feature-card h3 {
     margin: 0 0 14px;
-    color: #ffffff;
+    color: #222222;
     font-size: 1.2rem;
 }
 
 #highlights .feature-card p {
     flex-grow: 1;
     margin: 0 0 24px;
-    color: #bdbdbd;
+    color: #666666;
     line-height: 1.8;
 }
 
@@ -105,7 +119,7 @@
     margin-top: auto;
 }
 
-
+/* CENTER FEATURE SECTION TITLE */
 #highlights h2.title {
     text-align: center !important;
     width: 100% !important;
@@ -118,20 +132,28 @@
 }
 
 
-/* PROMOTIONAL MATERIALS GRID */
+/* ========================================
+   PROMOTIONAL MATERIALS GRID
+======================================== */
+
 .materials-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 28px;
 }
 
+
+/* ========================================
+   PROMOTIONAL MATERIAL CARDS
+======================================== */
+
 .material-card {
     min-width: 0;
     overflow: hidden;
-    border: 1px solid #303030;
+    border: 1px solid #e8dfd2;
     border-radius: 16px;
-    background: #191919;
-    color: #ffffff;
+    background: #ffffff;
+    color: #222222;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -146,7 +168,7 @@
     height: 340px;
     padding: 14px;
     object-fit: contain;
-    background: #101010;
+    background: #f8f5ef;
 }
 
 .material-content {
@@ -155,23 +177,27 @@
 
 .material-content h3 {
     margin: 0 0 10px;
-    color: #ffffff;
+    color: #222222;
     font-size: 1.2rem;
 }
 
 .material-content p {
     margin: 0 0 22px;
-    color: #bdbdbd;
+    color: #666666;
     line-height: 1.7;
 }
 
-/* BROCHURE FRONT AND BACK */
+
+/* ========================================
+   BROCHURE FRONT AND BACK
+======================================== */
+
 .brochure-preview {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 10px;
     padding: 14px;
-    background: #101010;
+    background: #f8f5ef;
 }
 
 .brochure-preview img {
@@ -181,7 +207,11 @@
     object-fit: contain;
 }
 
-/* MATERIAL AND GALLERY BUTTONS */
+
+/* ========================================
+   MATERIAL AND GALLERY BUTTONS
+======================================== */
+
 .material-card .btn,
 .gallery-action .btn {
     display: inline-flex;
@@ -203,10 +233,15 @@
 .material-card .btn:hover,
 .gallery-action .btn:hover {
     background: #ff9b43;
+    border-color: #ff9b43;
     transform: translateY(-2px);
 }
 
-/* EVENT GALLERY: 12 IMAGES */
+
+/* ========================================
+   EVENT GALLERY
+======================================== */
+
 .event-gallery-grid {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -218,9 +253,9 @@
     width: 100%;
     height: 230px;
     object-fit: cover;
-    border: 1px solid #303030;
+    border: 1px solid #e8dfd2;
     border-radius: 10px;
-    background: #1b1b1b;
+    background: #f5f0e8;
     transition: transform 0.25s ease, border-color 0.25s ease;
 }
 
@@ -235,40 +270,27 @@
     margin-top: 36px;
 }
 
-/* FINAL CALL TO ACTION */
-.final-cta {
-    padding: 40px 24px;
-    text-align: center;
-}
+/* ========================================
+   CLICKABLE IMAGES
+======================================== */
 
-.final-cta-text {
-    max-width: 600px;
-    margin: 0 auto 24px;
-    line-height: 1.8;
-}
-
-.final-cta .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    margin: 6px;
-}
-
-
-/* CLICKABLE IMAGES */
 .material-card > img,
 .brochure-preview img,
 .event-gallery-grid img {
     cursor: zoom-in;
 }
 
-/* IMAGE LIGHTBOX */
+
+/* ========================================
+   IMAGE LIGHTBOX
+======================================== */
+
 .image-lightbox {
     display: none;
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgba(0, 0, 0, 0.94);
+    background: rgba(25, 20, 15, 0.94);
     align-items: center;
     justify-content: center;
     padding: 70px 80px;
@@ -295,26 +317,29 @@
     left: 70px;
     right: 70px;
     margin: 0;
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     font-size: 14px;
 }
+
+
+/* LIGHTBOX CONTROLS */
 
 .lightbox-close,
 .lightbox-nav {
     position: absolute;
     border: none;
-    color: #fff;
-    background: rgba(30, 30, 30, 0.8);
+    color: #ffffff;
+    background: rgba(40, 35, 30, 0.85);
     cursor: pointer;
     z-index: 2;
-    transition: background 0.2s ease;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .lightbox-close:hover,
 .lightbox-nav:hover {
     background: #f58220;
-    color: #111;
+    color: #111111;
 }
 
 .lightbox-close {
@@ -343,38 +368,13 @@
     right: 20px;
 }
 
-@media (max-width: 600px) {
-    .image-lightbox {
-        padding: 60px 48px;
-    }
 
-    #lightbox-image {
-        max-height: 72vh;
-    }
+/* ========================================
+   TABLET RESPONSIVE LAYOUT
+======================================== */
 
-    .lightbox-close {
-        top: 12px;
-        right: 12px;
-    }
-
-    .lightbox-prev {
-        left: 5px;
-    }
-
-    .lightbox-next {
-        right: 5px;
-    }
-
-    #lightbox-caption {
-        left: 15px;
-        right: 15px;
-        bottom: 12px;
-    }
-}
-
-
-/* TABLETS */
 @media (max-width: 900px) {
+
     #highlights,
     #promotional-materials,
     #event-gallery {
@@ -397,10 +397,16 @@
     .brochure-preview img {
         height: 260px;
     }
+
 }
 
-/* MOBILE */
+
+/* ========================================
+   MOBILE RESPONSIVE LAYOUT
+======================================== */
+
 @media (max-width: 600px) {
+
     #highlights,
     #promotional-materials,
     #event-gallery {
@@ -445,10 +451,45 @@
         width: 100%;
         margin: 6px 0;
     }
+
+    /* MOBILE LIGHTBOX */
+
+    .image-lightbox {
+        padding: 60px 48px;
+    }
+
+    #lightbox-image {
+        max-height: 72vh;
+    }
+
+    .lightbox-close {
+        top: 12px;
+        right: 12px;
+    }
+
+    .lightbox-prev {
+        left: 5px;
+    }
+
+    .lightbox-next {
+        right: 5px;
+    }
+
+    #lightbox-caption {
+        left: 15px;
+        right: 15px;
+        bottom: 12px;
+    }
+
 }
 
-/* SMALL PHONES */
+
+/* ========================================
+   SMALL PHONES
+======================================== */
+
 @media (max-width: 380px) {
+
     .event-gallery-grid img {
         height: 135px;
     }
@@ -461,4 +502,5 @@
     .brochure-preview img {
         height: 190px;
     }
+
 }

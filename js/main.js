@@ -116,7 +116,6 @@ function mountHeader() {
         { label: "Home", href: "/index.html" },
         { label: "Features", href: "/features.html" },
         { label: "Services", href: "/services.html" },
-        { label: "Email Marketing", href: "/email-marketing.html" },
         { label: "Contact", href: "/contact.html" }
     ];
 
@@ -245,6 +244,8 @@ function mountFooter() {
     footer.innerHTML = `
         <footer class="footer">
             <div class="container footer-grid">
+
+                <!-- FOOTER BRAND -->
                 <div class="footer-brand">
                     <a class="brand" href="index.html">
                         <span class="brand-icon" aria-hidden="true">🦊</span>
@@ -260,6 +261,7 @@ function mountFooter() {
                     </p>
                 </div>
 
+                <!-- QUICK LINKS -->
                 <div class="footer-links">
                     <h3>Quick Links</h3>
                     <a href="index.html">Home</a>
@@ -268,13 +270,84 @@ function mountFooter() {
                     <a href="contact.html">Contact</a>
                 </div>
 
+                <!-- EXPLORE MORE -->
                 <div class="footer-links">
                     <h3>Explore More</h3>
-                    <a href="email-marketing.html">Email Campaign</a>
+                    <a href="features.html#event-gallery">Event Gallery</a>
+                    <a href="features.html#promotional-materials">Promotional Materials</a>
                     <a href="api.html">Data Integration</a>
                 </div>
+
+                <!-- SOCIAL MEDIA -->
+                <div class="footer-links footer-social">
+                    <h3>Social Media</h3>
+
+                    <!-- HOLY ANGEL UNIVERSITY -->
+                    <p class="social-group-title">
+                        Holy Angel University Social Media
+                    </p>
+
+                    <div class="social-icons">
+                        <a
+                            href="https://www.facebook.com/holyangel1933"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Holy Angel University Facebook"
+                        >
+                            <img
+                                src="https://european-experiences.com/wp-content/uploads/2024/01/Facebook_Logo_Primary.png"
+                                alt="Facebook"
+                            >
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/holyangel1933"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="Holy Angel University Instagram"
+                        >
+                            <img
+                                src="https://tse1.mm.bing.net/th/id/OIP.pYHsG5OTS9o560bpL93jvgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Instagram"
+                            >
+                        </a>
+                    </div>
+
+                    <!-- SCHOOL OF COMPUTING -->
+                    <p class="social-group-title">
+                        School of Computing Social Media
+                    </p>
+
+                    <div class="social-icons">
+                        <a
+                            href="https://www.facebook.com/haucictofficial"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="School of Computing Facebook"
+                        >
+                            <img
+                                src="https://european-experiences.com/wp-content/uploads/2024/01/Facebook_Logo_Primary.png"
+                                alt="Facebook"
+                            >
+                        </a>
+
+                        <a
+                            href="https://www.instagram.com/haucscsoc/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            aria-label="School of Computing Instagram"
+                        >
+                            <img
+                                src="https://tse1.mm.bing.net/th/id/OIP.pYHsG5OTS9o560bpL93jvgHaHa?r=0&rs=1&pid=ImgDetMain&o=7&rm=3"
+                                alt="Instagram"
+                            >
+                        </a>
+                    </div>
+                </div>
+
             </div>
 
+            <!-- COPYRIGHT -->
             <div class="container footer-bottom">
                 <p>
                     &copy; ${new Date().getFullYear()}

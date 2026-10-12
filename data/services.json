@@ -1,0 +1,56 @@
+[
+  {
+    "id": 1,
+    "name": "Campus Exploration",
+    "description": "Discover Holy Angel University and learn more about the School of Computing.",
+    "category": "Campus Experience",
+    "availability": "During ADF2027",
+    "cta": "Learn More",
+    "link": "features.html"
+  },
+  {
+    "id": 2,
+    "name": "Student Organization Booths",
+    "description": "Meet student organizations and discover opportunities to connect with the campus community.",
+    "category": "Student Organizations",
+    "availability": "During ADF2027",
+    "cta": "Explore Features",
+    "link": "features.html"
+  },
+  {
+    "id": 3,
+    "name": "Interactive Computing Activities",
+    "description": "Explore computing activities and discover different areas of technology.",
+    "category": "Technology",
+    "availability": "During ADF2027",
+    "cta": "Learn More",
+    "link": "features.html"
+  },
+  {
+    "id": 4,
+    "name": "Games and Activities",
+    "description": "Discover engaging activities and enjoy the ADF2027 campus experience.",
+    "category": "Campus Activities",
+    "availability": "During ADF2027",
+    "cta": "Make an Inquiry",
+    "link": "contact.html"
+  },
+  {
+    "id": 5,
+    "name": "Workshops and Learning",
+    "description": "Explore opportunities to learn, create, and discover new skills through hands-on activities.",
+    "category": "Learning Experience",
+    "availability": "Subject to the official event program",
+    "cta": "Make an Inquiry",
+    "link": "contact.html"
+  },
+  {
+    "id": 6,
+    "name": "Technology Exhibits",
+    "description": "Discover technologies and computing ideas featured in the event.",
+    "category": "Technology",
+    "availability": "Subject to the official event program",
+    "cta": "Learn More",
+    "link": "features.html"
+  }
+]

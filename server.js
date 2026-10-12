@@ -1,11 +1,30 @@
+
 const express = require("express");
 const path = require("path");
+const fs = require("fs");
 
 const app = express();
 const PORT = 3000;
 
-// Serve website files from the project folder
-app.use(express.static(__dirname));
+// Serve website files, but keep the data folder private
+app.use(express.static(__dirname, {
+    index: false,
+    dotfiles: "ignore",
+    setHeaders: (res, filePath) => {
+        const dataPath = path.resolve(__dirname, "data") + path.sep;
+        const requestedPath = path.resolve(filePath);
+
+        if (requestedPath.startsWith(dataPath)) {
+            res.status(403);
+        }
+    }
+}));
+
+// Read JSON datasets
+function readDataset(filename) {
+    const filePath = path.join(__dirname, "data", filename);
+    return JSON.parse(fs.readFileSync(filePath, "utf8"));
+}
 
 // Homepage
 app.get("/", (req, res) => {
@@ -25,6 +44,46 @@ app.get("/services.html", (req, res) => {
 // Contact page
 app.get("/contact.html", (req, res) => {
     res.sendFile(path.join(__dirname, "contact.html"));
+});
+
+// API: Retrieve services
+app.get("/api/services", (req, res) => {
+    try {
+        const services = readDataset("services.json");
+
+        res.json({
+            success: true,
+            count: services.length,
+            data: services
+        });
+    } catch (error) {
+        console.error("Error loading services:", error.message);
+
+        res.status(500).json({
+            success: false,
+            message: "Unable to retrieve services."
+        });
+    }
+});
+
+// API: Retrieve customer records
+app.get("/api/customers", (req, res) => {
+    try {
+        const customers = readDataset("customers.json");
+
+        res.json({
+            success: true,
+            count: customers.length,
+            data: customers
+        });
+    } catch (error) {
+        console.error("Error loading customers:", error.message);
+
+        res.status(500).json({
+            success: false,
+            message: "Unable to retrieve customer records."
+        });
+    }
 });
 
 // Start server

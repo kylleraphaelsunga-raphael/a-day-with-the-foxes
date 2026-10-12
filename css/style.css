@@ -158,7 +158,7 @@ h2.title {
     line-height: 1.1;
 }
 
-section > .container > .sub {
+section>.container>.sub {
     max-width: 680px;
     margin: 18px auto 50px;
     color: var(--muted);
@@ -167,7 +167,7 @@ section > .container > .sub {
     line-height: 1.8;
 }
 
-section > .container > .title + .sub {
+section>.container>.title+.sub {
     margin-top: 18px;
 }
 
@@ -175,7 +175,7 @@ p {
     overflow-wrap: break-word;
 }
 
-p + p {
+p+p {
     margin-top: 15px;
 }
 
@@ -195,12 +195,10 @@ p + p {
     border: 1px solid transparent;
     border-radius: 999px;
 
-    background: linear-gradient(
-        135deg,
-        var(--orange-light),
-        var(--orange),
-        var(--orange-dark)
-    );
+    background: linear-gradient(135deg,
+            var(--orange-light),
+            var(--orange),
+            var(--orange-dark));
 
     box-shadow: 0 7px 18px rgba(244, 123, 32, 0.19);
 
@@ -434,16 +432,12 @@ p + p {
     padding-bottom: 100px;
 
     background:
-        radial-gradient(
-            ellipse at 82% 23%,
+        radial-gradient(ellipse at 82% 23%,
             rgba(244, 123, 32, 0.21),
-            transparent 34%
-        ),
-        radial-gradient(
-            ellipse at 4% 80%,
+            transparent 34%),
+        radial-gradient(ellipse at 4% 80%,
             rgba(200, 90, 10, 0.13),
-            transparent 32%
-        ),
+            transparent 32%),
         linear-gradient(145deg, #0d0d0d 0%, #191512 53%, #28180e 100%);
 
     color: var(--white);
@@ -500,20 +494,18 @@ p + p {
 .hero h1 span {
     display: inline-block;
 
-    background: linear-gradient(
-        110deg,
-        #ffd0a5 0%,
-        var(--orange-light) 35%,
-        var(--orange) 70%,
-        #ffb777 100%
-    );
+    background: linear-gradient(110deg,
+            #ffd0a5 0%,
+            var(--orange-light) 35%,
+            var(--orange) 70%,
+            #ffb777 100%);
 
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
-.hero > .container > p {
+.hero>.container>p {
     max-width: 620px;
     margin: 27px auto 38px;
 
@@ -545,7 +537,7 @@ p + p {
     margin: 55px auto 0;
 }
 
-.hero-imgs > div {
+.hero-imgs>div {
     position: relative;
     height: 260px;
     overflow: hidden;
@@ -559,7 +551,7 @@ p + p {
     box-shadow: 0 22px 45px rgba(0, 0, 0, 0.28);
 }
 
-.hero-imgs > div:nth-child(2) {
+.hero-imgs>div:nth-child(2) {
     height: 310px;
     border-color: rgba(244, 123, 32, 0.4);
     box-shadow:
@@ -575,7 +567,7 @@ p + p {
     transition: transform 0.65s ease;
 }
 
-.hero-imgs > div:hover img {
+.hero-imgs>div:hover img {
     transform: scale(1.06);
 }
 
@@ -587,7 +579,7 @@ p + p {
     overflow: hidden;
 }
 
-.ph > span,
+.ph>span,
 .image-caption {
     position: absolute;
     right: 0;
@@ -597,11 +589,9 @@ p + p {
 
     padding: 38px 15px 14px;
 
-    background: linear-gradient(
-        to top,
-        rgba(13, 13, 13, 0.86),
-        transparent
-    );
+    background: linear-gradient(to top,
+            rgba(13, 13, 13, 0.86),
+            transparent);
 
     color: var(--white);
     font-size: 0.8rem;
@@ -611,7 +601,7 @@ p + p {
     pointer-events: none;
 }
 
-.ph > img {
+.ph>img {
     position: relative;
     z-index: 1;
 }
@@ -648,7 +638,7 @@ p + p {
     white-space: nowrap;
 }
 
-.marquee > div {
+.marquee>div {
     width: max-content;
     animation: marquee-scroll 32s linear infinite;
 }
@@ -670,11 +660,9 @@ p + p {
 
 #about {
     background:
-        radial-gradient(
-            ellipse at 100% 0%,
+        radial-gradient(ellipse at 100% 0%,
             rgba(244, 123, 32, 0.07),
-            transparent 36%
-        ),
+            transparent 36%),
         var(--paper);
 }
 
@@ -685,7 +673,7 @@ p + p {
     gap: 65px;
 }
 
-.about-grid > div:first-child {
+.about-grid>div:first-child {
     padding-top: 12px;
 }
 
@@ -696,14 +684,14 @@ p + p {
     letter-spacing: -0.7px;
 }
 
-.about-grid > div:first-child > p {
+.about-grid>div:first-child>p {
     margin-bottom: 18px;
     color: #655e58;
     font-size: 0.97rem;
     line-height: 2;
 }
 
-.about-grid > div:first-child .btn {
+.about-grid>div:first-child .btn {
     margin-top: 18px;
 }
 
@@ -784,7 +772,7 @@ p + p {
     font-style: normal;
 }
 
-.about-grid .paper > .btn {
+.about-grid .paper>.btn {
     width: 100%;
     margin-top: 4px;
 }
@@ -800,11 +788,9 @@ p + p {
     border: 1px solid rgba(244, 123, 32, 0.35);
     border-radius: 20px;
     background:
-        radial-gradient(
-            circle at top right,
+        radial-gradient(circle at top right,
             rgba(244, 123, 32, 0.2),
-            transparent 45%
-        ),
+            transparent 45%),
         linear-gradient(135deg, #1b1b1b, #0d0d0d);
     color: #fff;
     text-align: center;
@@ -959,11 +945,9 @@ p + p {
     border-bottom: 1px solid #f2ebe4;
 
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             rgba(244, 123, 32, 0.07),
-            transparent 70%
-        ),
+            transparent 70%),
         #fffaf6;
 }
 
@@ -1045,7 +1029,7 @@ p + p {
     line-height: 1.8;
 }
 
-.org-advisers p + p {
+.org-advisers p+p {
     margin-top: 8px;
 }
 
@@ -1110,11 +1094,9 @@ p + p {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            ellipse at 0% 20%,
+        radial-gradient(ellipse at 0% 20%,
             rgba(244, 123, 32, 0.075),
-            transparent 32%
-        ),
+            transparent 32%),
         linear-gradient(180deg, #fffaf5, #fff5eb);
 }
 
@@ -1178,11 +1160,9 @@ p + p {
     border-radius: 12px;
 
     background:
-        radial-gradient(
-            circle at 50% 40%,
+        radial-gradient(circle at 50% 40%,
             rgba(244, 123, 32, 0.15),
-            transparent 65%
-        ),
+            transparent 65%),
         #f5e8dc;
 }
 
@@ -1201,13 +1181,13 @@ p + p {
     transform: scale(1.025);
 }
 
-.promo-image > span {
+.promo-image>span {
     z-index: 0;
     color: #8b7b6d;
     font-size: 0.8rem;
 }
 
-.promo-image > img:not([src]) {
+.promo-image>img:not([src]) {
     display: none;
 }
 
@@ -1226,13 +1206,13 @@ p + p {
     height: 440px;
 }
 
-.promo > h3 {
+.promo>h3 {
     margin: 22px 25px 8px;
     font-size: 1.15rem;
     font-weight: 800;
 }
 
-.promo > p {
+.promo>p {
     margin: 0 25px 27px;
     color: var(--muted);
     font-size: 0.87rem;
@@ -1248,16 +1228,12 @@ p + p {
     overflow: hidden;
 
     background:
-        radial-gradient(
-            ellipse at 100% 10%,
+        radial-gradient(ellipse at 100% 10%,
             rgba(244, 123, 32, 0.19),
-            transparent 36%
-        ),
-        radial-gradient(
-            ellipse at 0% 100%,
+            transparent 36%),
+        radial-gradient(ellipse at 0% 100%,
             rgba(200, 90, 10, 0.12),
-            transparent 30%
-        ),
+            transparent 30%),
         linear-gradient(145deg, #111111, #21160f);
 
     color: var(--white);
@@ -1279,11 +1255,9 @@ p + p {
     border: 1px solid rgba(255, 164, 92, 0.25);
     border-radius: var(--radius-lg);
 
-    background: linear-gradient(
-        135deg,
-        rgba(255, 255, 255, 0.09),
-        rgba(255, 255, 255, 0.025)
-    );
+    background: linear-gradient(135deg,
+            rgba(255, 255, 255, 0.09),
+            rgba(255, 255, 255, 0.025));
 
     box-shadow:
         0 28px 75px rgba(0, 0, 0, 0.3),
@@ -1372,11 +1346,9 @@ p + p {
     border-radius: var(--radius-xl);
 
     background:
-        radial-gradient(
-            circle at 100% 0%,
+        radial-gradient(circle at 100% 0%,
             rgba(255, 255, 255, 0.13),
-            transparent 33%
-        ),
+            transparent 33%),
         linear-gradient(125deg, #c85a0a, #f47b20 58%, #ff9b4b);
 
     box-shadow: 0 25px 60px rgba(200, 90, 10, 0.2);
@@ -1454,6 +1426,7 @@ p + p {
 }
 
 
+
 /* =========================
    13. FOOTER
    ========================= */
@@ -1464,63 +1437,236 @@ p + p {
 }
 
 .footer {
-    padding-top: 65px;
+    padding-top: 60px;
 }
+
+/* FOOTER LAYOUT */
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr 1fr;
-    gap: 55px;
-    padding-bottom: 48px;
+    grid-template-columns: 1.35fr 0.75fr 1fr 1.2fr;
+    gap: 38px;
+    align-items: start;
+    padding-bottom: 45px;
 }
 
+/* FOOTER BRAND */
+
 .footer-brand .brand {
-    margin-bottom: 22px;
+    display: inline-flex;
+    margin-bottom: 18px;
 }
 
 .footer-brand > p {
-    max-width: 330px;
+    max-width: 290px;
+    margin: 0;
     color: #aaa19a;
     font-size: 0.88rem;
-    line-height: 1.9;
+    line-height: 1.8;
 }
+
+/* FOOTER LINK COLUMNS */
 
 .footer-links {
     display: flex;
     align-items: flex-start;
     flex-direction: column;
-    gap: 11px;
+    gap: 12px;
+    min-width: 0;
 }
 
 .footer-links h3 {
-    margin-bottom: 10px;
+    margin: 0 0 7px;
     color: var(--white);
     font-size: 0.98rem;
     font-weight: 800;
+    line-height: 1.5;
 }
 
-.footer-links a {
+.footer-links > a {
     color: #aaa19a;
     font-size: 0.84rem;
+    line-height: 1.6;
+    text-decoration: none;
+    overflow-wrap: anywhere;
     transition:
         color var(--transition),
         transform var(--transition);
 }
 
-.footer-links a:hover {
-    transform: translateX(4px);
+.footer-links > a:hover {
+    transform: translateX(3px);
     color: var(--orange-light);
 }
 
+/* =========================
+   FOOTER SOCIAL MEDIA
+   ========================= */
+
+.footer-social {
+    gap: 0;
+}
+
+.footer-social .social-group-title {
+    margin: 15px 0 8px;
+    color: #f58220;
+    font-size: 0.82rem;
+    font-weight: 700;
+    line-height: 1.6;
+}
+
+/* First group sits closer to the section heading */
+.footer-social h3 + .social-group-title {
+    margin-top: 2px;
+}
+
+/* ICON ROW */
+
+.footer-social .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.footer-social .social-icons a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    border-radius: 8px;
+    transition:
+        transform 0.2s ease,
+        opacity 0.2s ease;
+}
+
+.footer-social .social-icons a:hover {
+    transform: translateY(-3px);
+    opacity: 0.8;
+}
+
+.footer-social .social-icons img {
+    display: block;
+    width: 27px;
+    height: 27px;
+    object-fit: contain;
+}
+
+/* =========================
+   COPYRIGHT
+   ========================= */
+
 .footer-bottom {
-    padding-block: 22px;
-
+    padding-block: 20px;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
-
     color: #8f8781;
     font-size: 0.76rem;
+    line-height: 1.7;
     text-align: center;
 }
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* =========================
+   RESPONSIVE FOOTER
+   ========================= */
+
+@media (max-width: 1100px) {
+    .footer-grid {
+        grid-template-columns: 1.2fr 0.8fr 1fr;
+        gap: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-brand > p {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        padding-top: 42px;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 35px 25px;
+        padding-bottom: 35px;
+    }
+
+    .footer-brand {
+        grid-column: 1 / -1;
+    }
+
+    .footer-links {
+        gap: 11px;
+    }
+
+    .footer-links h3 {
+        margin-bottom: 5px;
+    }
+
+    .footer-social .social-group-title {
+        font-size: 0.8rem;
+    }
+
+    .footer-social .social-icons {
+        gap: 10px;
+    }
+
+    .footer-social .social-icons a {
+        width: 36px;
+        height: 36px;
+    }
+
+    .footer-social .social-icons img {
+        width: 29px;
+        height: 29px;
+    }
+}
+
+@media (max-width: 420px) {
+    .footer {
+        padding-top: 35px;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand {
+        grid-column: auto;
+    }
+
+    .footer-brand > p {
+        max-width: 100%;
+    }
+
+    .footer-links {
+        gap: 10px;
+    }
+
+    .footer-social .social-group-title {
+        margin-top: 14px;
+    }
+
+    .footer-social h3 + .social-group-title {
+        margin-top: 2px;
+    }
+
+    .footer-bottom {
+        padding-block: 18px;
+    }
+}
+
+
 
 
 /* =========================
@@ -1601,11 +1747,11 @@ p + p {
         gap: 15px;
     }
 
-    .hero-imgs > div {
+    .hero-imgs>div {
         height: 220px;
     }
 
-    .hero-imgs > div:nth-child(2) {
+    .hero-imgs>div:nth-child(2) {
         height: 265px;
     }
 
@@ -1649,7 +1795,7 @@ p + p {
         font-size: clamp(2.2rem, 9vw, 3.2rem);
     }
 
-    section > .container > .sub {
+    section>.container>.sub {
         margin-bottom: 35px;
         font-size: 0.9rem;
     }
@@ -1724,7 +1870,7 @@ p + p {
         font-size: clamp(3.5rem, 14vw, 5.8rem);
     }
 
-    .hero > .container > p {
+    .hero>.container>p {
         margin-top: 23px;
         margin-bottom: 28px;
         font-size: 0.92rem;
@@ -1736,20 +1882,20 @@ p + p {
         margin-top: 40px;
     }
 
-    .hero-imgs > div {
+    .hero-imgs>div {
         height: 185px;
         border-radius: 14px;
     }
 
-    .hero-imgs > div:nth-child(2) {
+    .hero-imgs>div:nth-child(2) {
         height: 210px;
     }
 
-    .hero-imgs > div:nth-child(3) {
+    .hero-imgs>div:nth-child(3) {
         display: none;
     }
 
-    .ph > span,
+    .ph>span,
     .image-caption {
         padding: 28px 10px 10px;
         font-size: 0.69rem;
@@ -1860,12 +2006,12 @@ p + p {
         height: 380px;
     }
 
-    .promo > h3 {
+    .promo>h3 {
         margin-inline: 20px;
         font-size: 1.08rem;
     }
 
-    .promo > p {
+    .promo>p {
         margin-inline: 20px;
     }
 
@@ -1927,7 +2073,7 @@ p + p {
         grid-column: 1 / -1;
     }
 
-    .footer-brand > p {
+    .footer-brand>p {
         max-width: 360px;
     }
 
@@ -1950,11 +2096,11 @@ p + p {
         font-size: clamp(3.15rem, 14vw, 4rem);
     }
 
-    .hero-imgs > div {
+    .hero-imgs>div {
         height: 155px;
     }
 
-    .hero-imgs > div:nth-child(2) {
+    .hero-imgs>div:nth-child(2) {
         height: 180px;
     }
 
@@ -2013,6 +2159,7 @@ p + p {
    ========================= */
 
 @media (prefers-reduced-motion: reduce) {
+
     *,
     *::before,
     *::after {

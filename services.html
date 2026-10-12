@@ -1,312 +1,255 @@
-
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0d0d0d">
-    <meta name="description" content="Discover the activities, experiences, and promotional campaigns of A Day with the Foxes 2027.">
+    <meta name="description"
+        content="Explore ADF2027 activities, services, social media campaigns, and event information at Holy Angel University.">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <title>Activities and Services | ADF2027</title>
+    <title>Services and Campaigns | ADF2027</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
 
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/services.css">
 </head>
 
 <body>
 
     <div id="site-header"></div>
 
-    <main>
+    <main class="services-page">
 
         <!-- PAGE HERO -->
-        <section class="hero">
+        <section class="hero" id="services-home">
             <div class="container">
-                <small>DISCOVER ADF2027</small>
+
+                <small class="services-eyebrow">A DAY WITH THE FOXES 2027</small>
 
                 <h1>
-                    Explore the<br>
-                    <span>Experience</span>
+                    Explore Our<br>
+                    <span>Activities</span>
                 </h1>
 
-                <p>
-                    Discover the activities, communities, and experiences waiting for you.
+                <p class="services-hero-description">
+                    Discover the activities, learning experiences, and technology
+                    showcases that make ADF2027 an opportunity to experience
+                    campus life at the Holy Angel University School of Computing.
                 </p>
 
-                <div class="cta" style="margin-top:25px;">
+                <div class="cta">
                     <a href="#services-list" class="btn">Explore Activities</a>
-                    <a href="contact.html" class="btn ghost">Make an Inquiry</a>
+                    <a href="#social-campaign" class="btn ghost">View Campaign</a>
                 </div>
+
             </div>
         </section>
 
-        <!-- SERVICES / ACTIVITIES -->
-        <section id="services-list">
+
+        <!-- SERVICES AND ACTIVITIES -->
+        <section class="section services-list-section" id="services-list">
             <div class="container">
-                <h2 class="title">What You'll Experience</h2>
 
-                <p class="sub">
-                    Explore. Participate. Connect.
-                </p>
-
-                <p style="text-align:center; max-width:780px; margin:0 auto 32px; color:#ddd;">
-                    ADF2027 brings together student organizations, technology,
-                    creativity, and campus experiences. Explore the activities
-                    below to discover what interests you.
-                </p>
-
-                <!-- Cards will be loaded from data/services.json -->
-                <div id="services-grid" class="grid g3">
-                    <article class="paper svc">
-                        <div class="ico">🏫</div>
-                        <h3>Campus Exploration</h3>
-                        <p>Discover the campus and learn more about the School of Computing.</p>
-                    </article>
-
-                    <article class="paper svc">
-                        <div class="ico">🤝</div>
-                        <h3>Organization Booths</h3>
-                        <p>Meet student organizations and learn about their communities.</p>
-                    </article>
-
-                    <article class="paper svc">
-                        <div class="ico">💻</div>
-                        <h3>Technology Demonstrations</h3>
-                        <p>Explore technology, student projects, and interactive demonstrations.</p>
-                    </article>
-
-                    <article class="paper svc">
-                        <div class="ico">🎮</div>
-                        <h3>Games and Activities</h3>
-                        <p>Participate in engaging activities and discover new interests.</p>
-                    </article>
-
-                    <article class="paper svc">
-                        <div class="ico">🎓</div>
-                        <h3>Academic Discovery</h3>
-                        <p>Learn about computing disciplines and student opportunities.</p>
-                    </article>
-
-                    <article class="paper svc">
-                        <div class="ico">🦊</div>
-                        <h3>Fox Community</h3>
-                        <p>Connect with fellow students and experience the Fox spirit.</p>
-                    </article>
+                <div class="section-heading">
+                    <span class="eyebrow">WHAT YOU CAN EXPERIENCE</span>
+                    <h2 class="title">Activities and Experiences</h2>
+                    <p class="sub">
+                        Explore the activities and experiences prepared for
+                        visitors of A Day with the Foxes 2027.
+                    </p>
                 </div>
 
-                <div style="text-align:center; margin-top:30px;">
-                    <a href="api.html#services-data" class="btn">
-                        View Services Data
+                <div id="services-grid" class="grid g3" aria-live="polite">
+                    <p class="services-loading">Loading activities...</p>
+                </div>
+
+                <div class="services-actions">
+                    <a href="features.html" class="btn dark">
+                        Explore Event Features
                     </a>
 
                     <a href="contact.html" class="btn ghost">
-                        Ask About an Activity
+                        Make an Inquiry
                     </a>
                 </div>
+
             </div>
         </section>
 
-        <!-- SOCIAL MEDIA MARKETING -->
-        <section id="social">
+
+        <!-- DATASETS -->
+        <section class="section services-api-section" id="event-data">
             <div class="container">
-                <h2 class="title">Social Media Campaign</h2>
 
-                <p class="sub">
-                    Experience Campus Life. Discover the Fox Spirit.
-                </p>
+                <div class="section-heading">
+                    <span class="eyebrow">EXPLORE ADF2027</span>
+                    <h2 class="title">Discover More Information</h2>
+                    <p class="sub">
+                        Explore our available activities and view sample visitor
+                        records through the buttons below.
+                    </p>
+                </div>
 
-                <div class="paper" style="text-align:center; margin-bottom:30px;">
-                    <h3>Campaign Objective</h3>
+                <div class="paper services-api-panel">
 
-                    <p style="margin-top:12px;">
-                        Promote ADF2027 through engaging visual content that
-                        introduces the event, highlights its activities, and
-                        encourages students to learn more and participate.
+                    <div class="services-dataset-controls">
+                        <button type="button" class="btn" id="show-services-dataset">
+                            Show Services Dataset
+                        </button>
+
+                        <button type="button" class="btn dark" id="show-customers-dataset">
+                            Show Customer Dataset
+                        </button>
+                    </div>
+
+                    <p id="dataset-feedback" class="services-api-feedback" role="status" aria-live="polite">
+                        Choose a dataset to view its information.
                     </p>
 
-                    <div class="tags">
-                        <span>#ADF2027</span>
-                        <span>#ADayWithTheFoxes</span>
-                        <span>#DiscoverTheFoxSpirit</span>
-                        <span>#HAU</span>
+                    <div id="dataset-results" hidden>
+
+                        <div class="services-api-table-heading">
+                            <h3 id="dataset-title">Dataset</h3>
+                            <p id="dataset-description"></p>
+                        </div>
+
+                        <div class="services-table-scroll">
+                            <table class="services-api-table" id="dataset-table">
+                                <thead></thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="services-api-empty">
+                                            Select a dataset to view its records.
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
                     </div>
-                </div>
-
-                <div class="post-grid">
-
-                    <article class="post">
-                        <div class="ph sq" style="position:relative;">
-                            <span>Campaign Poster 1</span>
-                            <img src="public/images/social-1.jpg"
-                                 alt="ADF2027 campaign announcement poster"
-                                 loading="lazy"
-                                 onerror="this.remove()"
-                                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-                        </div>
-
-                        <div class="cap">
-                            <b>Campaign Post 1: Event Awareness</b>
-
-                            <p>
-                                Discover A Day with the Foxes 2027 and explore
-                                what the School of Computing has to offer.
-                            </p>
-
-                            <p style="margin-top:10px;">
-                                #ADF2027 #ADayWithTheFoxes
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="post">
-                        <div class="ph sq" style="position:relative;">
-                            <span>Campaign Poster 2</span>
-                            <img src="public/images/social-2.jpg"
-                                 alt="ADF2027 campaign event promotion poster"
-                                 loading="lazy"
-                                 onerror="this.remove()"
-                                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-                        </div>
-
-                        <div class="cap">
-                            <b>Campaign Post 2: Event Highlights</b>
-
-                            <p>
-                                Explore organizations, technology demonstrations,
-                                and activities during the ADF2027 experience.
-                            </p>
-
-                            <p style="margin-top:10px;">
-                                #DiscoverTheFoxSpirit #HAU
-                            </p>
-                        </div>
-                    </article>
-
-                    <article class="post">
-                        <div class="ph portrait" style="position:relative;">
-                            <span>Campaign Infographic</span>
-                            <img src="public/images/infographic.jpg"
-                                 alt="ADF2027 event information infographic"
-                                 loading="lazy"
-                                 onerror="this.remove()"
-                                 style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;">
-                        </div>
-
-                        <div class="cap">
-                            <b>Campaign Post 3: Event Information</b>
-
-                            <p>
-                                Share key event details, dates, venue information,
-                                and highlights in an easy-to-read infographic.
-                            </p>
-
-                            <p style="margin-top:10px;">
-                                #ADF2027 #CampusLife
-                            </p>
-                        </div>
-                    </article>
 
                 </div>
 
-                <div style="text-align:center; margin-top:30px;">
-                    <a href="contact.html" class="btn">
-                        Contact the Organizers
-                    </a>
-                </div>
             </div>
         </section>
 
-        <!-- EMAIL MARKETING PREVIEW -->
-        <section id="newsletter">
+
+        <!-- SOCIAL MEDIA MARKETING CAMPAIGN -->
+        <section class="section services-social-section" id="social-campaign">
             <div class="container">
-                <h2 class="title">Email Marketing Campaign</h2>
 
-                <p class="sub">
-                    An Invitation to Discover ADF2027
-                </p>
-
-                <div class="email-wrap">
-
-                    <div>
-                        <h3>Campaign Purpose</h3>
-
-                        <p style="color:#ddd; margin:14px 0;">
-                            This email marketing mockup demonstrates how the
-                            organizers could invite students and visitors to
-                            learn about ADF2027. It includes a subject line,
-                            promotional message, event information, and a call
-                            to action.
-                        </p>
-
-                        <ul style="padding-left:22px; color:#ddd;">
-                            <li>Introduce the event</li>
-                            <li>Highlight activities and organizations</li>
-                            <li>Share the date and venue</li>
-                            <li>Encourage visitors to make an inquiry</li>
-                        </ul>
-
-                        <br>
-
-                        <a href="email-marketing.html" class="btn">
-                            View Full Email Mockup
-                        </a>
-                    </div>
-
-                    <!-- Email preview -->
-                    <div class="email">
-                        <div class="bar">
-                            <p><strong>From:</strong> ADF2027 Organizers</p>
-                            <p><strong>Subject:</strong> You're invited: A Day with the Foxes!</p>
-                        </div>
-
-                        <div class="banner">
-                            <h4>A DAY WITH THE FOXES</h4>
-                            <p>Experience Campus Life. Discover the Fox Spirit.</p>
-                        </div>
-
-                        <div class="body">
-                            <h3>You're Invited!</h3>
-
-                            <p style="margin-top:10px;">
-                                Get ready to explore the School of Computing
-                                through student organizations, technology,
-                                and engaging campus experiences.
-                            </p>
-
-                            <ul>
-                                <li>Meet student organizations</li>
-                                <li>Explore technology activities</li>
-                                <li>Discover the campus community</li>
-                            </ul>
-
-                            <p>
-                                <strong>February 23–24, 2027</strong><br>
-                                9:00 AM – 4:00 PM<br>
-                                SJH Building, Academic Hall
-                            </p>
-
-                            <br>
-
-                            <a href="contact.html" class="cta">
-                                Learn More About ADF2027
-                            </a>
-                        </div>
-
-                        <div class="foot">
-                            A Day with the Foxes 2027<br>
-                            Holy Angel University · School of Computing
-                        </div>
-                    </div>
-
+                <div class="section-heading">
+                    <span class="eyebrow">SOCIAL MEDIA MARKETING</span>
+                    <h2 class="title">Discover ADF2027</h2>
+                    <p class="sub">
+                        Our social media campaign introduces ADF2027, highlights
+                        the event experience, and encourages students and
+                        prospective visitors to explore the School of Computing.
+                    </p>
                 </div>
 
-                <p style="text-align:center; margin-top:28px; color:#b9b9b9; font-size:.85rem;">
-                    This is a visual email marketing mockup. It does not send
-                    marketing emails automatically.
-                </p>
+                <div class="paper services-campaign-objective">
+                    <span class="services-campaign-kicker">CAMPAIGN OBJECTIVE</span>
+
+                    <h3>Build Awareness. Encourage Participation.</h3>
+
+                    <p>
+                        The campaign promotes A Day with the Foxes 2027 by
+                        showcasing the event's identity and campus experiences
+                        while encouraging visitors to learn more about the event.
+                    </p>
+
+                    <div class="services-campaign-tags">
+                        <span>Event Awareness</span>
+                        <span>Campus Experience</span>
+                        <span>Visitor Engagement</span>
+                    </div>
+                </div>
+
+                <!-- MAIN SOCIAL MEDIA POSTER -->
+                <article class="paper services-campaign-card services-main-campaign">
+
+                    <div class="services-poster services-poster-awareness">
+                        <button type="button" class="services-poster-click" id="open-poster"
+                            aria-label="View enlarged ADF2027 campaign poster">
+
+                            <img src="public/images/social_1.png"
+                                alt="Official ADF2027 social media marketing campaign poster" loading="lazy">
+                        </button>
+                    </div>
+
+                    <div class="services-campaign-copy">
+                        <span class="services-post-category">Official Campaign</span>
+
+                        <h3>Experience Campus Life. Discover the Fox Spirit.</h3>
+
+                        <p>
+                            Discover ADF2027 and explore the activities,
+                            learning experiences, and technology showcases
+                            prepared by the Holy Angel University School of Computing.
+                        </p>
+
+                        <p>
+                            Visit the official website for more information about ADF2027.
+                        </p>
+
+                        <a href="https://daywiththefoxes.wixsite.com/adf2027-event-organi" class="btn" target="_blank"
+                            rel="noopener noreferrer">
+                            Visit Official WIX Website
+                        </a>
+
+                    </div>
+
+
+
+                </article>
+
+                <!-- ENLARGED POSTER VIEWER -->
+                <div class="poster-lightbox" id="poster-lightbox" hidden>
+                    <button type="button" class="poster-lightbox-close" id="close-poster"
+                        aria-label="Close enlarged poster">
+                        &times;
+                    </button>
+
+                    <img src="public/images/social_1.png" alt="Enlarged official ADF2027 campaign poster"
+                        class="poster-lightbox-image">
+                </div>
+
+                </article>
+
+            </div>
+        </section>
+
+
+        <!-- FINAL CALL TO ACTION -->
+        <section class="section">
+            <div class="container">
+
+                <div class="paper final-cta">
+                    <h2 class="title">Ready to Experience ADF2027?</h2>
+
+                    <p class="final-cta-text">
+                        Learn more about our activities or contact us for
+                        additional event information.
+                    </p>
+
+                    <div class="section-actions">
+                        <a href="features.html" class="btn dark">
+                            Explore Activities
+                        </a>
+
+                        <a href="contact.html" class="btn ghost">
+                            Contact Us
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -316,5 +259,7 @@
 
     <script src="js/main.js"></script>
     <script src="js/services.js"></script>
+
 </body>
+
 </html>

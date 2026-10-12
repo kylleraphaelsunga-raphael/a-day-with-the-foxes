@@ -1,0 +1,413 @@
+
+/* =========================
+   ADF2027 API & DATA INTEGRATION
+   Content sections only
+   Does not modify shared header,
+   hero, CTA, or footer styles
+   ========================= */
+
+/* =========================
+   API INTRODUCTION
+   ========================= */
+
+.api-intro {
+    max-width: 800px;
+    margin: 0 auto 35px;
+    text-align: center;
+    color: #555555;
+    line-height: 1.8;
+}
+
+.api-intro p {
+    margin: 0;
+}
+
+/* =========================
+   INTRODUCTION CARDS
+   ========================= */
+
+.grid.g3 {
+    align-items: stretch;
+}
+
+.grid.g3 .paper.svc {
+    height: 100%;
+    padding: 28px 24px;
+    background: #ffffff;
+    border: 1px solid #e8dfd2;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(40, 30, 15, 0.05);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grid.g3 .paper.svc:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(40, 30, 15, 0.09);
+}
+
+.grid.g3 .paper.svc .ico {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 54px;
+    height: 54px;
+    margin-bottom: 18px;
+    border-radius: 12px;
+    background: #fff0df;
+    font-size: 1.7rem;
+}
+
+.grid.g3 .paper.svc h3 {
+    margin: 0 0 12px;
+    color: #292929;
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.grid.g3 .paper.svc p {
+    margin: 0;
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}
+
+/* =========================
+   API PANELS
+   ========================= */
+
+.api-panel {
+    margin-bottom: 35px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e8dfd2;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(40, 30, 15, 0.05);
+}
+
+.api-panel h3 {
+    margin: 0 0 10px;
+    color: #222222;
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.api-description {
+    color: #666666;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+/* =========================
+   API METHOD AND ENDPOINT
+   ========================= */
+
+.api-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.api-method {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 6px;
+    background: #e3f5e9;
+    color: #17663a;
+    font-weight: 800;
+    font-size: 0.82rem;
+    letter-spacing: 0.5px;
+}
+
+.api-endpoint {
+    display: inline-block;
+    padding: 7px 12px;
+    border-radius: 6px;
+    background: #fff3e5;
+    color: #b95c08;
+    border: 1px solid #f5dfc6;
+    overflow-wrap: anywhere;
+    font-family: monospace;
+    font-size: 0.95rem;
+}
+
+/* =========================
+   API STATUS
+   ========================= */
+
+.api-status {
+    color: #555555;
+    margin: 12px 0;
+    padding: 12px 15px;
+    background: #f8f5ef;
+    border-left: 4px solid #f58220;
+    border-radius: 5px;
+    font-size: 0.92rem;
+    line-height: 1.6;
+}
+
+.api-status.api-error {
+    color: #a62929;
+    background: #fff0f0;
+    border-left-color: #d93025;
+}
+
+/* =========================
+   DATA TABLES
+   ========================= */
+
+.api-table-wrap {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 20px;
+    border: 1px solid #e8dfd2;
+    border-radius: 9px;
+}
+
+.api-table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    color: #333333;
+    background: #ffffff;
+}
+
+.api-table th,
+.api-table td {
+    text-align: left;
+    padding: 14px 15px;
+    border-bottom: 1px solid #eee7dd;
+    vertical-align: top;
+    line-height: 1.6;
+    overflow-wrap: anywhere;
+}
+
+.api-table th {
+    background: #f5f0e8;
+    color: #8b470c;
+    font-size: 0.88rem;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.api-table td {
+    background: #ffffff;
+    font-size: 0.92rem;
+}
+
+.api-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.api-table tbody tr:hover td {
+    background: #fffaf3;
+    transition: background 0.2s ease;
+}
+
+/* =========================
+   RECORD COUNTER AND NOTES
+   ========================= */
+
+.api-note {
+    color: #777777;
+    font-size: 0.9rem;
+    line-height: 1.7;
+    margin-top: 15px;
+}
+
+.api-count {
+    color: #c9660c;
+    font-weight: 800;
+    font-size: 1rem;
+}
+
+/* =========================
+   API ACTION BUTTONS
+   ========================= */
+
+.api-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+.api-actions .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 12px 20px;
+    border: 1px solid #f58220;
+    border-radius: 7px;
+    background: #f58220;
+    color: #ffffff;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.api-actions .btn:hover {
+    background: #d96b0b;
+    border-color: #d96b0b;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.api-actions .btn.ghost {
+    background: #ffffff;
+    color: #c9660c;
+    border-color: #e8c9a9;
+}
+
+.api-actions .btn.ghost:hover {
+    background: #fff3e5;
+    color: #9b4d08;
+    border-color: #f58220;
+}
+
+/* =========================
+   API REQUEST PROCESS
+   ========================= */
+
+main > section .paper:not(.api-panel) {
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #e8dfd2;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(40, 30, 15, 0.05);
+}
+
+main > section .paper:not(.api-panel) > p {
+    margin: 0;
+    color: #555555;
+    line-height: 1.8;
+}
+
+main > section .paper:not(.api-panel) > p strong {
+    color: #8b470c;
+    font-weight: 700;
+}
+
+/* =========================
+   API PROCESS CODE DISPLAY
+   ========================= */
+
+.api-code {
+    display: block;
+    padding: 18px 20px;
+    margin-top: 18px;
+    border: 1px solid #e8dfd2;
+    border-left: 4px solid #f58220;
+    border-radius: 8px;
+    background: #f8f5ef;
+    color: #a95108;
+    overflow-wrap: anywhere;
+    font-family: "Courier New", monospace;
+    font-size: 0.95rem;
+    line-height: 2;
+}
+
+/* =========================
+   DATASET PROCESS TEXT
+   ========================= */
+
+#services-data .paper > p,
+#customers-data .paper > p {
+    line-height: 1.7;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+@media (max-width: 768px) {
+    .grid.g3 .paper.svc {
+        padding: 24px 20px;
+    }
+
+    .api-panel {
+        padding: 22px;
+    }
+
+    .api-panel h3 {
+        font-size: 1.25rem;
+    }
+
+    .api-table th,
+    .api-table td {
+        padding: 12px;
+    }
+
+    .api-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .api-actions .btn {
+        width: 100%;
+    }
+
+    main > section .paper:not(.api-panel) {
+        padding: 24px;
+    }
+
+    .api-code {
+        padding: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .api-intro {
+        font-size: 0.92rem;
+    }
+
+    .grid.g3 .paper.svc {
+        padding: 20px;
+    }
+
+    .grid.g3 .paper.svc .ico {
+        width: 46px;
+        height: 46px;
+        font-size: 1.45rem;
+    }
+
+    .api-panel {
+        padding: 16px;
+        border-radius: 10px;
+    }
+
+    .api-description {
+        font-size: 0.92rem;
+    }
+
+    .api-meta {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .api-endpoint {
+        max-width: 100%;
+    }
+
+    .api-table {
+        min-width: 560px;
+    }
+
+    main > section .paper:not(.api-panel) {
+        padding: 18px;
+    }
+
+    .api-code {
+        padding: 14px;
+        font-size: 0.85rem;
+    }
+}
