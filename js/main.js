@@ -276,6 +276,8 @@ function mountFooter() {
                     <a href="features.html#event-gallery">Event Gallery</a>
                     <a href="features.html#promotional-materials">Promotional Materials</a>
                     <a href="api.html">Data Integration</a>
+                    <a href="https://github.com/kylleraphaelsunga-raphael/a-day-with-the-foxes" target="_blank" rel="noopener noreferrer">Github Repository</a>
+
                 </div>
 
                 <!-- SOCIAL MEDIA -->
