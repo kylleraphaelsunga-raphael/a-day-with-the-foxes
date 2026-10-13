@@ -3,6 +3,7 @@
    Main JavaScript
    ========================================================= */
 
+
 /* =========================
    1. EVENT CONFIGURATION
    ========================= */
@@ -110,7 +111,8 @@ function mountHeader() {
 
     if (!header) return;
 
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
 
     const links = [
         { label: "Home", href: "/index.html" },
@@ -122,12 +124,14 @@ function mountHeader() {
     header.innerHTML = `
         <header class="site">
             <div class="container nav">
-                <a class="brand" href="index.html" aria-label="ADF2027 Home">
+
+                <a class="brand" href="/index.html" aria-label="ADF2027 Home">
                     <img
                         class="brand-logo"
-                        src="public/images/SOC.png"
+                        src="/images/SOC.png"
                         alt="HAU School of Computing Logo"
                     >
+
                     <span class="brand-text">
                         <strong>ADF2027</strong>
                         <small>A DAY WITH THE FOXES</small>
@@ -146,17 +150,27 @@ function mountHeader() {
                     <span></span>
                 </button>
 
-                <nav class="nav-links" id="main-navigation" aria-label="Main navigation">
-                    ${links.map(link => `
-                        <a
-                            href="${link.href}"
-                            class="${currentPage === link.href ? "active" : ""}"
-                            ${currentPage === link.href ? 'aria-current="page"' : ""}
-                        >
-                            ${link.label}
-                        </a>
-                    `).join("")}
+                <nav
+                    class="nav-links"
+                    id="main-navigation"
+                    aria-label="Main navigation"
+                >
+                    ${links.map(link => {
+                        const isActive =
+                            currentPage === link.href.split("/").pop();
+
+                        return `
+                            <a
+                                href="${link.href}"
+                                class="${isActive ? "active" : ""}"
+                                ${isActive ? 'aria-current="page"' : ""}
+                            >
+                                ${link.label}
+                            </a>
+                        `;
+                    }).join("")}
                 </nav>
+
             </div>
         </header>
     `;
@@ -164,27 +178,27 @@ function mountHeader() {
     const burger = header.querySelector(".burger");
     const nav = header.querySelector(".nav-links");
 
-    if (burger && nav) {
-        burger.addEventListener("click", () => {
-            const isOpen = nav.classList.toggle("open");
+    if (!burger || !nav) return;
 
-            burger.classList.toggle("open", isOpen);
-            burger.setAttribute("aria-expanded", String(isOpen));
-        });
+    burger.addEventListener("click", () => {
+        const isOpen = nav.classList.toggle("open");
 
-        nav.querySelectorAll("a").forEach(link => {
-            link.addEventListener("click", () => {
-                nav.classList.remove("open");
-                burger.classList.remove("open");
-                burger.setAttribute("aria-expanded", "false");
-            });
+        burger.classList.toggle("open", isOpen);
+        burger.setAttribute("aria-expanded", String(isOpen));
+    });
+
+    nav.querySelectorAll("a").forEach(link => {
+        link.addEventListener("click", () => {
+            nav.classList.remove("open");
+            burger.classList.remove("open");
+            burger.setAttribute("aria-expanded", "false");
         });
-    }
+    });
 }
 
 
 /* =========================
-   ADF2027 COUNTDOWN
+   4. EVENT COUNTDOWN
    ========================= */
 
 function initializeCountdown() {
@@ -195,12 +209,10 @@ function initializeCountdown() {
 
     if (!daysEl || !hoursEl || !minutesEl || !secondsEl) return;
 
-    // February 23, 2027, at 12:00 AM Philippine time (UTC+8)
-    const eventStart = new Date("2027-02-23T00:00:00+08:00").getTime();
+    const eventStart = new Date(CONFIG.EVENT_DATE).getTime();
 
     function updateCountdown() {
-        const now = Date.now();
-        const difference = eventStart - now;
+        const difference = eventStart - Date.now();
 
         if (difference <= 0) {
             daysEl.textContent = "000";
@@ -210,13 +222,20 @@ function initializeCountdown() {
             return;
         }
 
-        const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+        const days = Math.floor(
+            difference / (1000 * 60 * 60 * 24)
+        );
+
         const hours = Math.floor(
-            (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+            (difference % (1000 * 60 * 60 * 24)) /
+            (1000 * 60 * 60)
         );
+
         const minutes = Math.floor(
-            (difference % (1000 * 60 * 60)) / (1000 * 60)
+            (difference % (1000 * 60 * 60)) /
+            (1000 * 60)
         );
+
         const seconds = Math.floor(
             (difference % (1000 * 60)) / 1000
         );
@@ -233,7 +252,7 @@ function initializeCountdown() {
 
 
 /* =========================
-   4. SHARED FOOTER
+   5. SHARED FOOTER
    ========================= */
 
 function mountFooter() {
@@ -243,16 +262,19 @@ function mountFooter() {
 
     footer.innerHTML = `
         <footer class="footer">
+
             <div class="container footer-grid">
 
-                        <!-- FOOTER BRAND -->
-                        <div class="footer-brand">
-                            <a class="brand" href="index.html">
-                                <img
-                                    class="brand-icon"
-                                    src="public/images/favicon.png"
-                                    alt="ADF2027 Logo"
-                                >
+                <!-- FOOTER BRAND -->
+                <div class="footer-brand">
+
+                    <a class="brand" href="/index.html">
+                        <img
+                            class="brand-icon"
+                            src="/images/favicon.png"
+                            alt="ADF2027 Logo"
+                        >
+
                         <span class="brand-text">
                             <strong>ADF2027</strong>
                             <small>A DAY WITH THE FOXES</small>
@@ -263,37 +285,62 @@ function mountFooter() {
                         Experience Campus Life.
                         Discover the Fox Spirit.
                     </p>
+
                 </div>
+
 
                 <!-- QUICK LINKS -->
                 <div class="footer-links">
+
                     <h3>Quick Links</h3>
-                    <a href="index.html">Home</a>
-                    <a href="features.html">Features</a>
-                    <a href="services.html">Services</a>
-                    <a href="contact.html">Contact</a>
+
+                    <a href="/index.html">Home</a>
+                    <a href="/features.html">Features</a>
+                    <a href="/services.html">Services</a>
+                    <a href="/contact.html">Contact</a>
+
                 </div>
+
 
                 <!-- EXPLORE MORE -->
                 <div class="footer-links">
+
                     <h3>Explore More</h3>
-                    <a href="features.html#event-gallery">Event Gallery</a>
-                    <a href="features.html#promotional-materials">Promotional Materials</a>
-                    <a href="api.html">Data Integration</a>
-                    <a href="https://github.com/kylleraphaelsunga-raphael/a-day-with-the-foxes" target="_blank" rel="noopener noreferrer">Github Repository</a>
+
+                    <a href="/features.html#event-gallery">
+                        Event Gallery
+                    </a>
+
+                    <a href="/features.html#promotional-materials">
+                        Promotional Materials
+                    </a>
+
+                    <a href="/api.html">
+                        Data Integration
+                    </a>
+
+                    <a
+                        href="https://github.com/kylleraphaelsunga-raphael/a-day-with-the-foxes"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        GitHub Repository
+                    </a>
 
                 </div>
 
+
                 <!-- SOCIAL MEDIA -->
                 <div class="footer-links footer-social">
+
                     <h3>Social Media</h3>
 
-                    <!-- HOLY ANGEL UNIVERSITY -->
                     <p class="social-group-title">
                         Holy Angel University Social Media
                     </p>
 
                     <div class="social-icons">
+
                         <a
                             href="https://www.facebook.com/holyangel1933"
                             target="_blank"
@@ -301,7 +348,7 @@ function mountFooter() {
                             aria-label="Holy Angel University Facebook"
                         >
                             <img
-                                src="public/images/fb.png"
+                                src="/images/fb.png"
                                 alt="Facebook"
                             >
                         </a>
@@ -313,18 +360,20 @@ function mountFooter() {
                             aria-label="Holy Angel University Instagram"
                         >
                             <img
-                                src="public/images/ig.png"
+                                src="/images/ig.png"
                                 alt="Instagram"
                             >
                         </a>
+
                     </div>
 
-                    <!-- SCHOOL OF COMPUTING -->
+
                     <p class="social-group-title">
                         School of Computing Social Media
                     </p>
 
                     <div class="social-icons">
+
                         <a
                             href="https://www.facebook.com/haucictofficial"
                             target="_blank"
@@ -332,7 +381,7 @@ function mountFooter() {
                             aria-label="School of Computing Facebook"
                         >
                             <img
-                                src="public/images/fb.png"
+                                src="/images/fb.png"
                                 alt="Facebook"
                             >
                         </a>
@@ -344,49 +393,60 @@ function mountFooter() {
                             aria-label="School of Computing Instagram"
                         >
                             <img
-                                src="public/images/ig.png"
+                                src="/images/ig.png"
                                 alt="Instagram"
                             >
                         </a>
+
                     </div>
+
                 </div>
 
             </div>
 
+
             <!-- COPYRIGHT -->
             <div class="container footer-bottom">
+
                 <p>
                     &copy; ${new Date().getFullYear()}
                     ADF2027 - A Day with the Foxes.
                     All rights reserved.
                 </p>
+
             </div>
+
         </footer>
     `;
 }
 
 
 /* =========================
-   5. HERO IMAGES
+   6. HERO IMAGES
    ========================= */
 
 function loadHeroImages() {
-    const placeholders = document.querySelectorAll(".hero-imgs [data-src]");
+    const placeholders = document.querySelectorAll(
+        ".hero-imgs [data-src]"
+    );
 
     placeholders.forEach(placeholder => {
         const imagePath = placeholder.dataset.src;
-        const imageLabel = placeholder.dataset.ph || "ADF2027 campus life";
+        const imageLabel =
+            placeholder.dataset.ph || "ADF2027 campus life";
 
         if (!imagePath) return;
 
         placeholder.classList.add("ph", "hero-image");
 
         const image = document.createElement("img");
+
         image.src = imagePath;
         image.alt = imageLabel;
         image.loading = "eager";
 
         const caption = document.createElement("span");
+
         caption.className = "image-caption";
         caption.textContent = imageLabel;
 
@@ -399,8 +459,9 @@ function loadHeroImages() {
     });
 }
 
+
 /* =========================
-   6. ORGANIZATION CARDS
+   7. ORGANIZATION CARDS
    ========================= */
 
 function renderOrganizationCards() {
@@ -410,22 +471,31 @@ function renderOrganizationCards() {
 
     container.innerHTML = ORGS.map(org => `
         <article class="paper org org-card" data-org="${org.key}">
+
             <div class="org-logo">
+
                 <img
-                    src="public/images/${org.logo}"
+                    src="/images/${org.logo}"
                     alt="${org.name} logo"
                     loading="lazy"
                 >
+
             </div>
 
             <div class="org-content">
-                <p class="org-category">${org.category}</p>
+
+                <p class="org-category">
+                    ${org.category}
+                </p>
 
                 <h3>${org.name}</h3>
 
-                <p class="org-tagline">“${org.tagline}”</p>
+                <p class="org-tagline">
+                    “${org.tagline}”
+                </p>
 
                 <div class="org-advisers">
+
                     <p>
                         <strong>Adviser:</strong>
                         ${org.adviser}
@@ -437,6 +507,7 @@ function renderOrganizationCards() {
                             ${org.coAdviser}
                         </p>
                     ` : ""}
+
                 </div>
 
                 <a
@@ -448,11 +519,12 @@ function renderOrganizationCards() {
                 >
                     Learn More
                 </a>
+
             </div>
+
         </article>
     `).join("");
 
-    // Handle organization logo loading errors.
     container.querySelectorAll(".org-logo img").forEach(image => {
         const logoWrapper = image.closest(".org-logo");
 
@@ -472,8 +544,9 @@ function renderOrganizationCards() {
     });
 }
 
+
 /* =========================
-   7. PROMOTIONAL VIDEO
+   8. PROMOTIONAL VIDEO
    ========================= */
 
 function loadPromotionalVideo() {
@@ -483,16 +556,21 @@ function loadPromotionalVideo() {
     if (videoContainer) {
         const videoId = CONFIG.YT_VIDEO_ID;
 
-        videoContainer.innerHTML = `
-            <iframe
-                src="https://www.youtube.com/embed/${videoId}?origin=${window.location.origin}"
-                title="ADF2027 Promotional Video"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerpolicy="strict-origin-when-cross-origin"
-                allowfullscreen>
-            </iframe>
-        `;
+        const iframe = document.createElement("iframe");
+
+        iframe.src =
+            `https://www.youtube.com/embed/${videoId}`;
+
+        iframe.title = "ADF2027 Promotional Video";
+
+        iframe.allow =
+            "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+
+        iframe.referrerPolicy = "strict-origin-when-cross-origin";
+        iframe.allowFullscreen = true;
+        iframe.loading = "lazy";
+
+        videoContainer.replaceChildren(iframe);
     }
 
     if (videoStats) {
@@ -501,8 +579,9 @@ function loadPromotionalVideo() {
     }
 }
 
+
 /* =========================
-   8. SCROLL REVEAL
+   9. SCROLL REVEAL
    ========================= */
 
 function initializeScrollReveal() {
@@ -535,8 +614,11 @@ function initializeScrollReveal() {
 }
 
 
-/* ADF2027 IMAGE LIGHTBOX */
-document.addEventListener("DOMContentLoaded", function () {
+/* =========================
+   10. IMAGE LIGHTBOX
+   ========================= */
+
+function initializeImageLightbox() {
     const lightbox = document.getElementById("image-lightbox");
     const lightboxImage = document.getElementById("lightbox-image");
     const caption = document.getElementById("lightbox-caption");
@@ -544,75 +626,118 @@ document.addEventListener("DOMContentLoaded", function () {
     const prevButton = document.getElementById("lightbox-prev");
     const nextButton = document.getElementById("lightbox-next");
 
+    // Some pages may not contain a lightbox.
+    if (
+        !lightbox ||
+        !lightboxImage ||
+        !caption ||
+        !closeButton ||
+        !prevButton ||
+        !nextButton
+    ) {
+        return;
+    }
+
     const images = Array.from(document.querySelectorAll(
         ".material-card > img, .brochure-preview img, .event-gallery-grid img"
     ));
 
+    if (!images.length) return;
+
     let currentIndex = 0;
+    let previouslyFocusedElement = null;
 
     function showImage(index) {
-        if (!images.length) return;
-
         currentIndex = (index + images.length) % images.length;
 
         const selectedImage = images[currentIndex];
 
-        lightboxImage.src = selectedImage.src;
-        lightboxImage.alt = selectedImage.alt || "Enlarged image";
+        lightboxImage.src = selectedImage.currentSrc || selectedImage.src;
+
+        lightboxImage.alt =
+            selectedImage.alt || "Enlarged ADF2027 image";
+
         caption.textContent =
-            selectedImage.alt || `Image ${currentIndex + 1} of ${images.length}`;
+            `${selectedImage.alt || "ADF2027 image"} (${currentIndex + 1} of ${images.length})`;
 
         lightbox.classList.add("active");
         lightbox.setAttribute("aria-hidden", "false");
+
         document.body.style.overflow = "hidden";
     }
 
     function closeLightbox() {
         lightbox.classList.remove("active");
         lightbox.setAttribute("aria-hidden", "true");
+
         lightboxImage.src = "";
         document.body.style.overflow = "";
+
+        if (previouslyFocusedElement) {
+            previouslyFocusedElement.focus();
+            previouslyFocusedElement = null;
+        }
     }
 
-    images.forEach(function (img, index) {
-        img.addEventListener("click", function () {
+    images.forEach((image, index) => {
+        image.style.cursor = "pointer";
+        image.setAttribute("tabindex", "0");
+        image.setAttribute("role", "button");
+
+        image.addEventListener("click", () => {
+            previouslyFocusedElement = image;
             showImage(index);
+            closeButton.focus();
+        });
+
+        image.addEventListener("keydown", event => {
+            if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+
+                previouslyFocusedElement = image;
+                showImage(index);
+                closeButton.focus();
+            }
         });
     });
 
     closeButton.addEventListener("click", closeLightbox);
 
-    prevButton.addEventListener("click", function () {
+    prevButton.addEventListener("click", () => {
         showImage(currentIndex - 1);
     });
 
-    nextButton.addEventListener("click", function () {
+    nextButton.addEventListener("click", () => {
         showImage(currentIndex + 1);
     });
 
-    lightbox.addEventListener("click", function (event) {
+    lightbox.addEventListener("click", event => {
         if (event.target === lightbox) {
             closeLightbox();
         }
     });
 
-    lightboxImage.addEventListener("click", closeLightbox);
-
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener("keydown", event => {
         if (!lightbox.classList.contains("active")) return;
 
-        if (event.key === "Escape") closeLightbox();
-        if (event.key === "ArrowLeft") showImage(currentIndex - 1);
-        if (event.key === "ArrowRight") showImage(currentIndex + 1);
-    });
-});
+        if (event.key === "Escape") {
+            closeLightbox();
+        }
 
+        if (event.key === "ArrowLeft") {
+            showImage(currentIndex - 1);
+        }
+
+        if (event.key === "ArrowRight") {
+            showImage(currentIndex + 1);
+        }
+    });
+}
 
 
 /* =========================
-   9. INITIALIZE HOMEPAGE
+   11. INITIALIZE WEBSITE
    ========================= */
-
 
 document.addEventListener("DOMContentLoaded", () => {
     mountHeader();
@@ -622,4 +747,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadPromotionalVideo();
     initializeScrollReveal();
     initializeCountdown();
+    initializeImageLightbox();
 });

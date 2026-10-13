@@ -8,25 +8,21 @@
     <meta name="description"
         content="Explore the ADF2027 API integration demonstration featuring services and sample customer records retrieved through GET endpoints.">
 
-    <title>ADF2027</title>
-    <link rel="icon" type="image/png" href="public/images/favicon.png">
+    <title>ADF2027 | API & Data Integration</title>
 
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <!-- Shared website styles -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- API page styles -->
-    <link rel="stylesheet" href="css/api.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/api.css">
 </head>
 
 <body>
 
-    <!-- Shared Header -->
     <div id="site-header"></div>
 
     <main>
@@ -54,13 +50,11 @@
             </div>
         </section>
 
-
         <!-- INTRODUCTION -->
         <section>
             <div class="container">
 
                 <h2 class="title">How the Integration Works</h2>
-
                 <p class="sub">Retrieve. Process. Display.</p>
 
                 <div class="api-intro">
@@ -100,17 +94,14 @@
                     </article>
 
                 </div>
-
             </div>
         </section>
-
 
         <!-- DATASET 1: SERVICES -->
         <section id="services-data">
             <div class="container">
 
                 <h2 class="title">Dataset 1: Services</h2>
-
                 <p class="sub">ADF2027 Activities and Experiences</p>
 
                 <div class="paper api-panel">
@@ -161,23 +152,20 @@
                             Refresh Services
                         </button>
 
-                        <a href="services.html" class="btn ghost">
+                        <a href="/services.html" class="btn ghost">
                             View Services Page
                         </a>
                     </div>
 
                 </div>
-
             </div>
         </section>
-
 
         <!-- DATASET 2: CUSTOMERS -->
         <section id="customers-data">
             <div class="container">
 
                 <h2 class="title">Dataset 2: Customer Information</h2>
-
                 <p class="sub">Sample Visitor Records</p>
 
                 <div class="paper api-panel">
@@ -229,23 +217,20 @@
                             Refresh Customer Data
                         </button>
 
-                        <a href="contact.html" class="btn ghost">
+                        <a href="/contact.html" class="btn ghost">
                             Visit Contact Page
                         </a>
                     </div>
 
                 </div>
-
             </div>
         </section>
-
 
         <!-- API PROCESS -->
         <section>
             <div class="container">
 
                 <h2 class="title">API Request Process</h2>
-
                 <p class="sub">From the Dataset to the Website</p>
 
                 <div class="paper">
@@ -284,21 +269,16 @@
                     </p>
 
                 </div>
-
             </div>
         </section>
 
     </main>
 
-    <!-- Shared Footer -->
     <div id="site-footer"></div>
 
-    <!-- Shared Website JavaScript -->
-    <script src="js/main.js"></script>
+    <script src="/js/main.js"></script>
 
-    <!-- API Data Retrieval -->
     <script>
-        // Escape text before inserting API values into the page.
         function escapeHTML(value) {
             return String(value ?? "").replace(/[&<>"']/g, character => ({
                 "&": "&amp;",
@@ -309,7 +289,6 @@
             })[character]);
         }
 
-        // Retrieve and display services.
         async function loadServicesData() {
             const status = document.getElementById("services-status");
             const tableBody = document.getElementById("services-table-body");
@@ -350,8 +329,7 @@
                     `).join("");
                 }
 
-                status.textContent =
-                    "Services data retrieved successfully.";
+                status.textContent = "Services data retrieved successfully.";
 
             } catch (error) {
                 console.error("Services API error:", error);
@@ -366,7 +344,6 @@
             }
         }
 
-        // Retrieve and display sample customer records.
         async function loadCustomersData() {
             const status = document.getElementById("customers-status");
             const tableBody = document.getElementById("customers-table-body");
@@ -423,14 +400,12 @@
             }
         }
 
-        // Refresh buttons.
         document.getElementById("refresh-services")
             .addEventListener("click", loadServicesData);
 
         document.getElementById("refresh-customers")
             .addEventListener("click", loadCustomersData);
 
-        // Load both datasets when the page opens.
         document.addEventListener("DOMContentLoaded", () => {
             loadServicesData();
             loadCustomersData();
@@ -438,5 +413,4 @@
     </script>
 
 </body>
-
 </html>

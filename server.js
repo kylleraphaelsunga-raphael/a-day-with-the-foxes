@@ -4,13 +4,12 @@ const path = require("path");
 const fs = require("fs");
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
-// Serve website files
-app.use(express.static(__dirname, {
-    index: false,
-    dotfiles: "ignore"
-}));
+// Serve CSS, JavaScript, and images
+app.use("/css", express.static(path.join(__dirname, "css")));
+app.use("/js", express.static(path.join(__dirname, "js")));
+app.use("/images", express.static(path.join(__dirname, "public", "images")));
 
 // Read JSON datasets
 function readDataset(filename) {
@@ -18,24 +17,29 @@ function readDataset(filename) {
     return JSON.parse(fs.readFileSync(filePath, "utf8"));
 }
 
-// Homepage
+// Serve HTML pages
 app.get("/", (req, res) => {
     res.sendFile(path.join(__dirname, "index.html"));
 });
 
-// Features page
+app.get("/index.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "index.html"));
+});
+
 app.get("/features.html", (req, res) => {
     res.sendFile(path.join(__dirname, "features.html"));
 });
 
-// Services page
 app.get("/services.html", (req, res) => {
     res.sendFile(path.join(__dirname, "services.html"));
 });
 
-// Contact page
 app.get("/contact.html", (req, res) => {
     res.sendFile(path.join(__dirname, "contact.html"));
+});
+
+app.get("/api.html", (req, res) => {
+    res.sendFile(path.join(__dirname, "api.html"));
 });
 
 // API: Retrieve services
@@ -78,7 +82,7 @@ app.get("/api/customers", (req, res) => {
     }
 });
 
-// Start server locally or export for Vercel
+// Start server locally
 if (require.main === module) {
     app.listen(PORT, () => {
         console.log(`ADF2027 running at http://localhost:${PORT}`);

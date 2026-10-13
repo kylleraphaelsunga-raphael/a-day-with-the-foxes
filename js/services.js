@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         "No activities are currently available."
                     )
                 );
+
                 return;
             }
 
@@ -142,27 +143,34 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     }
 
-    // Poster lightbox
+    // ========================================
+    // SOCIAL MEDIA POSTER LIGHTBOX
+    // ========================================
+
     const posterImageButton = document.getElementById("open-poster");
     const posterTextButton = document.getElementById("open-poster-button");
     const posterLightbox = document.getElementById("poster-lightbox");
     const closePosterButton = document.getElementById("close-poster");
 
     function openPoster() {
+        if (!posterLightbox) return;
+
         posterLightbox.hidden = false;
         document.body.style.overflow = "hidden";
     }
 
     function closePoster() {
+        if (!posterLightbox) return;
+
         posterLightbox.hidden = true;
         document.body.style.overflow = "";
     }
 
-    if (posterLightbox && closePosterButton) {
+    if (posterLightbox) {
         posterImageButton?.addEventListener("click", openPoster);
         posterTextButton?.addEventListener("click", openPoster);
 
-        closePosterButton.addEventListener("click", closePoster);
+        closePosterButton?.addEventListener("click", closePoster);
 
         posterLightbox.addEventListener("click", (event) => {
             if (event.target === posterLightbox) {
@@ -178,37 +186,53 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ========================================
-    // SHOW OR HIDE DATASETS
+    // SHOW OR HIDE API DATASETS
     // ========================================
 
     async function showDataset(type) {
-        if (!results || !table || !feedback) return;
+        if (!results || !table || !feedback || !title || !description) {
+            return;
+        }
 
-        // Clicking the active button hides the dataset.
+        // Hide the dataset if its button is clicked again.
         if (activeDataset === type) {
             results.hidden = true;
             activeDataset = null;
+
             feedback.textContent =
                 "Dataset information is hidden. Choose a dataset to view it again.";
+
             return;
         }
 
         const isServices = type === "services";
-        const endpoint = isServices ? "/api/services" : "/api/customers";
+        const endpoint = isServices
+            ? "/api/services"
+            : "/api/customers";
 
         title.textContent = isServices
             ? "ADF2027 Services Dataset"
-            : "ADF2027 Development Team Dataset";
+            : "ADF2027 Customer Information Dataset";
 
         description.textContent = isServices
             ? "Activities and experiences available for ADF2027."
-            : "Group members participating in the ADF2027 website development project.";
+            : "Customer information records retrieved from the ADF2027 API.";
 
         feedback.textContent = "Retrieving dataset information...";
         results.hidden = false;
 
+        // Clear the previous dataset while loading.
+        activeDataset = null;
+
         const tableHead = table.querySelector("thead");
         const tableBody = table.querySelector("tbody");
+
+        if (!tableHead || !tableBody) {
+            feedback.textContent =
+                "The dataset table is missing its header or body.";
+
+            return;
+        }
 
         tableHead.replaceChildren();
         tableBody.replaceChildren();
@@ -229,7 +253,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     : [];
 
             if (records.length === 0) {
-                feedback.textContent = "No records were found in this dataset.";
+                feedback.textContent =
+                    "No records were found in this dataset.";
+
                 activeDataset = type;
                 return;
             }
@@ -259,15 +285,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 columns.forEach((column) => {
                     const value = record[column];
 
-                    const cell = createElement(
-                        "td",
-                        "",
+                    const displayValue =
                         value === null || value === undefined
                             ? "Not specified"
                             : typeof value === "object"
                                 ? JSON.stringify(value)
-                                : String(value)
-                    );
+                                : String(value);
+
+                    const cell = createElement("td", "", displayValue);
 
                     row.appendChild(cell);
                 });
@@ -276,10 +301,14 @@ document.addEventListener("DOMContentLoaded", () => {
             });
 
             activeDataset = type;
+
             feedback.textContent =
                 `Successfully retrieved ${records.length} record(s).`;
         } catch (error) {
             console.error("Dataset retrieval error:", error);
+
+            tableHead.replaceChildren();
+            tableBody.replaceChildren();
 
             feedback.textContent =
                 "Unable to load the dataset. Please check that the server is running.";
@@ -289,20 +318,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     // ========================================
-    // BUTTON EVENTS
+    // DATASET BUTTON EVENTS
     // ========================================
 
-    if (servicesButton) {
-        servicesButton.addEventListener("click", () => {
-            showDataset("services");
-        });
-    }
+    servicesButton?.addEventListener("click", () => {
+        showDataset("services");
+    });
 
-    if (customersButton) {
-        customersButton.addEventListener("click", () => {
-            showDataset("customers");
-        });
-    }
+    customersButton?.addEventListener("click", () => {
+        showDataset("customers");
+    });
 
     // ========================================
     // INITIALIZE PAGE

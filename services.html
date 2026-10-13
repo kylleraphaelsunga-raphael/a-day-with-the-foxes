@@ -5,24 +5,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#0d0d0d">
+
     <meta name="description"
         content="Explore ADF2027 activities, services, social media campaigns, and event information at Holy Angel University.">
+
     <meta name="referrer" content="strict-origin-when-cross-origin">
 
-    <title>ADF2027</title>
-    <link rel="icon" type="image/png" href="public/images/favicon.png">
+    <title>Services and Activities | ADF2027</title>
+
+    <link rel="icon" type="image/png" href="/images/favicon.png">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap"
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@400;500;600;700;800&display=swap"
         rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/services.css">
 </head>
 
 <body>
 
+    <!-- SHARED HEADER -->
     <div id="site-header"></div>
 
     <main class="services-page">
@@ -31,7 +37,9 @@
         <section class="hero" id="services-home">
             <div class="container">
 
-                <small class="services-eyebrow">A DAY WITH THE FOXES 2027</small>
+                <small class="services-eyebrow">
+                    A DAY WITH THE FOXES 2027
+                </small>
 
                 <h1>
                     Explore Our<br>
@@ -45,8 +53,13 @@
                 </p>
 
                 <div class="cta">
-                    <a href="#services-list" class="btn">Explore Activities</a>
-                    <a href="#social-campaign" class="btn ghost">View Campaign</a>
+                    <a href="#services-list" class="btn">
+                        Explore Activities
+                    </a>
+
+                    <a href="#social-campaign" class="btn ghost">
+                        View Campaign
+                    </a>
                 </div>
 
             </div>
@@ -58,71 +71,119 @@
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="eyebrow">WHAT YOU CAN EXPERIENCE</span>
-                    <h2 class="title">Activities and Experiences</h2>
+
+                    <span class="eyebrow">
+                        WHAT YOU CAN EXPERIENCE
+                    </span>
+
+                    <h2 class="title">
+                        Activities and Experiences
+                    </h2>
+
                     <p class="sub">
                         Explore the activities and experiences prepared for
                         visitors of A Day with the Foxes 2027.
                     </p>
+
                 </div>
 
-                <div id="services-grid" class="grid g3" aria-live="polite">
-                    <p class="services-loading">Loading activities...</p>
+                <!-- Populated by services.js using the services API -->
+                <div
+                    id="services-grid"
+                    class="grid g3"
+                    aria-live="polite">
+
+                    <p class="services-loading">
+                        Loading activities...
+                    </p>
+
                 </div>
 
                 <div class="services-actions">
-                    <a href="features.html" class="btn dark">
+
+                    <a href="/features.html" class="btn dark">
                         Explore Event Features
                     </a>
 
-                    <a href="contact.html" class="btn ghost">
+                    <a href="/contact.html" class="btn ghost">
                         Make an Inquiry
                     </a>
+
                 </div>
 
             </div>
         </section>
 
 
-        <!-- DATASETS -->
+        <!-- API DATASET INTEGRATION -->
         <section class="section services-api-section" id="event-data">
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="eyebrow">EXPLORE ADF2027</span>
-                    <h2 class="title">Discover More Information</h2>
+
+                    <span class="eyebrow">
+                        EXPLORE ADF2027
+                    </span>
+
+                    <h2 class="title">
+                        Discover More Information
+                    </h2>
+
                     <p class="sub">
-                        Explore our available activities and view sample visitor
+                        Explore available activities and view sample visitor
                         records through the buttons below.
                     </p>
+
                 </div>
 
                 <div class="paper services-api-panel">
 
                     <div class="services-dataset-controls">
-                        <button type="button" class="btn" id="show-services-dataset">
+
+                        <button
+                            type="button"
+                            class="btn"
+                            id="show-services-dataset">
                             Show Services Dataset
                         </button>
 
-                        <button type="button" class="btn dark" id="show-customers-dataset">
+                        <button
+                            type="button"
+                            class="btn dark"
+                            id="show-customers-dataset">
                             Show Customer Dataset
                         </button>
+
                     </div>
 
-                    <p id="dataset-feedback" class="services-api-feedback" role="status" aria-live="polite">
+                    <p
+                        id="dataset-feedback"
+                        class="services-api-feedback"
+                        role="status"
+                        aria-live="polite">
                         Choose a dataset to view its information.
                     </p>
 
                     <div id="dataset-results" hidden>
 
                         <div class="services-api-table-heading">
-                            <h3 id="dataset-title">Dataset</h3>
+
+                            <h3 id="dataset-title">
+                                Dataset
+                            </h3>
+
                             <p id="dataset-description"></p>
+
                         </div>
 
                         <div class="services-table-scroll">
-                            <table class="services-api-table" id="dataset-table">
+
+                            <table
+                                class="services-api-table"
+                                id="dataset-table">
+
                                 <thead></thead>
+
                                 <tbody>
                                     <tr>
                                         <td class="services-api-empty">
@@ -130,7 +191,9 @@
                                         </td>
                                     </tr>
                                 </tbody>
+
                             </table>
+
                         </div>
 
                     </div>
@@ -142,23 +205,41 @@
 
 
         <!-- SOCIAL MEDIA MARKETING CAMPAIGN -->
-        <section class="section services-social-section" id="social-campaign">
+        <section
+            class="section services-social-section"
+            id="social-campaign">
+
             <div class="container">
 
                 <div class="section-heading">
-                    <span class="eyebrow">SOCIAL MEDIA MARKETING</span>
-                    <h2 class="title">Discover ADF2027</h2>
+
+                    <span class="eyebrow">
+                        SOCIAL MEDIA MARKETING
+                    </span>
+
+                    <h2 class="title">
+                        Discover ADF2027
+                    </h2>
+
                     <p class="sub">
                         Our social media campaign introduces ADF2027, highlights
                         the event experience, and encourages students and
                         prospective visitors to explore the School of Computing.
                     </p>
+
                 </div>
 
-                <div class="paper services-campaign-objective">
-                    <span class="services-campaign-kicker">CAMPAIGN OBJECTIVE</span>
 
-                    <h3>Build Awareness. Encourage Participation.</h3>
+                <!-- CAMPAIGN OBJECTIVE -->
+                <div class="paper services-campaign-objective">
+
+                    <span class="services-campaign-kicker">
+                        CAMPAIGN OBJECTIVE
+                    </span>
+
+                    <h3>
+                        Build Awareness. Encourage Participation.
+                    </h3>
 
                     <p>
                         The campaign promotes A Day with the Foxes 2027 by
@@ -167,28 +248,46 @@
                     </p>
 
                     <div class="services-campaign-tags">
+
                         <span>Event Awareness</span>
                         <span>Campus Experience</span>
                         <span>Visitor Engagement</span>
+
                     </div>
+
                 </div>
+
 
                 <!-- MAIN SOCIAL MEDIA POSTER -->
                 <article class="paper services-campaign-card services-main-campaign">
 
                     <div class="services-poster services-poster-awareness">
-                        <button type="button" class="services-poster-click" id="open-poster"
+
+                        <button
+                            type="button"
+                            class="services-poster-click"
+                            id="open-poster"
                             aria-label="View enlarged ADF2027 campaign poster">
 
-                            <img src="public/images/social_1.png"
-                                alt="Official ADF2027 social media marketing campaign poster" loading="lazy">
+                            <img
+                                src="/images/social_1.png"
+                                alt="ADF2027 social media marketing campaign poster"
+                                loading="lazy">
+
                         </button>
+
                     </div>
 
-                    <div class="services-campaign-copy">
-                        <span class="services-post-category">Official Campaign</span>
 
-                        <h3>Experience Campus Life. Discover the Fox Spirit.</h3>
+                    <div class="services-campaign-copy">
+
+                        <span class="services-post-category">
+                            Official Campaign
+                        </span>
+
+                        <h3>
+                            Experience Campus Life. Discover the Fox Spirit.
+                        </h3>
 
                         <p>
                             Discover ADF2027 and explore the activities,
@@ -197,32 +296,47 @@
                         </p>
 
                         <p>
-                            Visit the official website for more information about ADF2027.
+                            Visit the event website for more information
+                            about ADF2027.
                         </p>
 
-                        <a href="https://daywiththefoxes.wixsite.com/adf2027-event-organi" class="btn" target="_blank"
+                        <a
+                            href="https://daywiththefoxes.wixsite.com/adf2027-event-organi"
+                            class="btn"
+                            target="_blank"
                             rel="noopener noreferrer">
-                            Visit Official WIX Website
+                            Visit Official Wix Website
                         </a>
 
                     </div>
 
-
-
                 </article>
 
+
                 <!-- ENLARGED POSTER VIEWER -->
-                <div class="poster-lightbox" id="poster-lightbox" hidden>
-                    <button type="button" class="poster-lightbox-close" id="close-poster"
+                <div
+                    class="poster-lightbox"
+                    id="poster-lightbox"
+                    role="dialog"
+                    aria-modal="true"
+                    aria-label="Enlarged ADF2027 campaign poster"
+                    aria-hidden="true"
+                    hidden>
+
+                    <button
+                        type="button"
+                        class="poster-lightbox-close"
+                        id="close-poster"
                         aria-label="Close enlarged poster">
                         &times;
                     </button>
 
-                    <img src="public/images/social_1.png" alt="Enlarged official ADF2027 campaign poster"
+                    <img
+                        src="/images/social_1.png"
+                        alt="Enlarged ADF2027 campaign poster"
                         class="poster-lightbox-image">
-                </div>
 
-                </article>
+                </div>
 
             </div>
         </section>
@@ -233,7 +347,10 @@
             <div class="container">
 
                 <div class="paper final-cta">
-                    <h2 class="title">Ready to Experience ADF2027?</h2>
+
+                    <h2 class="title">
+                        Ready to Experience ADF2027?
+                    </h2>
 
                     <p class="final-cta-text">
                         Learn more about our activities or contact us for
@@ -241,14 +358,17 @@
                     </p>
 
                     <div class="section-actions">
-                        <a href="features.html" class="btn dark">
-                            Explore Activities
+
+                        <a href="/features.html" class="btn dark">
+                            Explore Event Features
                         </a>
 
-                        <a href="contact.html" class="btn ghost">
+                        <a href="/contact.html" class="btn ghost">
                             Contact Us
                         </a>
+
                     </div>
+
                 </div>
 
             </div>
@@ -256,10 +376,14 @@
 
     </main>
 
+
+    <!-- SHARED FOOTER -->
     <div id="site-footer"></div>
 
-    <script src="js/main.js"></script>
-    <script src="js/services.js"></script>
+
+    <!-- SHARED JAVASCRIPT -->
+    <script src="/js/main.js"></script>
+    <script src="/js/services.js"></script>
 
 </body>
 
