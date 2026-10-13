@@ -1,8 +1,4 @@
 
 {
-  "functions": {
-    "server.js": {
-      "includeFiles": "{*.html,css/**,js/**,public/images/**,data/**}"
-    }
-  }
+  "$schema": "https://openapi.vercel.sh/vercel.json"
 }
