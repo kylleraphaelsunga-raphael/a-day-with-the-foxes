@@ -352,11 +352,14 @@
 }
 
 .services-page .services-api-panel {
+    width: 100%;
+    min-width: 0;
     padding: clamp(22px, 4vw, 42px);
     background: #fbfaf8;
     border: 1px solid var(--services-border);
     border-radius: 18px;
     box-shadow: 0 10px 35px rgb(0 0 0 / 4%);
+    box-sizing: border-box;
 }
 
 .services-page .services-api-panel h3 {
@@ -366,14 +369,16 @@
     font-weight: 800;
 }
 
-.services-page .services-api-panel>p {
+.services-page .services-api-panel > p {
     margin: 0 0 24px;
     color: var(--services-muted);
     font-size: 0.94rem;
     line-height: 1.8;
 }
 
-.services-page .services-api-actions {
+/* DATASET BUTTONS */
+
+.services-page .services-dataset-controls {
     display: flex;
     flex-wrap: wrap;
     gap: 12px;
@@ -414,6 +419,8 @@
     outline-offset: 3px;
 }
 
+/* API FEEDBACK MESSAGE */
+
 .services-page #dataset-feedback {
     margin: 0 0 22px;
     padding: 13px 16px;
@@ -426,8 +433,17 @@
     overflow-wrap: anywhere;
 }
 
+/* DATASET RESULTS */
+
 .services-page #dataset-results {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
     margin-top: 25px;
+}
+
+.services-page .services-api-table-heading {
+    margin-bottom: 18px;
 }
 
 .services-page #dataset-title {
@@ -435,6 +451,7 @@
     color: var(--services-black);
     font-size: 1.25rem;
     font-weight: 800;
+    overflow-wrap: anywhere;
 }
 
 .services-page #dataset-description {
@@ -444,18 +461,29 @@
     line-height: 1.7;
 }
 
-.services-page .services-api-table-wrapper {
+/* TABLE SCROLL CONTAINER */
+
+.services-page .services-table-scroll {
     width: 100%;
+    max-width: 100%;
+    min-width: 0;
     overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-x: contain;
     border: 1px solid var(--services-border);
     border-radius: 10px;
     background: var(--services-white);
 }
 
+/* API DATA TABLE */
+
 .services-page #dataset-table {
     width: 100%;
+    min-width: 600px;
     border-collapse: collapse;
     text-align: left;
+    table-layout: auto;
 }
 
 .services-page #dataset-table th {
@@ -464,8 +492,9 @@
     background: var(--services-dark);
     font-size: 0.8rem;
     font-weight: 800;
-    letter-spacing: 0.4px;
+    letter-spacing: 0.3px;
     white-space: nowrap;
+    vertical-align: top;
 }
 
 .services-page #dataset-table td {
@@ -475,6 +504,8 @@
     font-size: 0.88rem;
     line-height: 1.65;
     overflow-wrap: anywhere;
+    word-break: normal;
+    vertical-align: top;
 }
 
 .services-page #dataset-table tbody tr:last-child td {
@@ -486,13 +517,15 @@
 }
 
 .services-page #dataset-table td[colspan] {
-    padding: 25px;
+    padding: 25px 16px;
     color: var(--services-muted);
     text-align: center;
 }
 
-/* Optional JSON response area, if included in the HTML */
+/* OPTIONAL JSON RESPONSE AREA */
+
 .services-page #services-json-output {
+    max-width: 100%;
     margin-top: 20px;
     overflow: hidden;
     border: 1px solid var(--services-border);
@@ -513,6 +546,144 @@
     overflow-wrap: anywhere;
 }
 
+/* ========================================
+   TABLET RESPONSIVE
+======================================== */
+
+@media (max-width: 768px) {
+    .services-page .services-api-panel {
+        padding: 24px 18px;
+    }
+
+    .services-page .services-dataset-controls {
+        gap: 10px;
+    }
+
+    .services-page #dataset-results {
+        margin-top: 20px;
+    }
+
+    .services-page #dataset-table {
+        min-width: 580px;
+    }
+
+    .services-page #dataset-table th,
+    .services-page #dataset-table td {
+        padding: 12px 14px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVE
+======================================== */
+
+@media (max-width: 480px) {
+    .services-page .services-api-panel {
+        padding: 18px 12px;
+        border-radius: 14px;
+    }
+
+    .services-page .services-api-panel h3 {
+        font-size: 1.2rem;
+    }
+
+    .services-page .services-api-panel > p {
+        font-size: 0.84rem;
+        line-height: 1.7;
+    }
+
+    /* Stack the dataset buttons */
+
+    .services-page .services-dataset-controls {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-bottom: 18px;
+    }
+
+    .services-page #show-services-dataset,
+    .services-page #show-customers-dataset {
+        width: 100%;
+        min-height: 46px;
+        padding: 12px;
+        font-size: 0.82rem;
+        transform: none;
+    }
+
+    .services-page #show-services-dataset:hover,
+    .services-page #show-customers-dataset:hover {
+        transform: none;
+    }
+
+    /* Feedback message */
+
+    .services-page #dataset-feedback {
+        margin-bottom: 18px;
+        padding: 11px 12px;
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    /* Dataset heading */
+
+    .services-page #dataset-results {
+        margin-top: 20px;
+    }
+
+    .services-page .services-api-table-heading {
+        margin-bottom: 14px;
+    }
+
+    .services-page #dataset-title {
+        font-size: 1.1rem;
+        line-height: 1.4;
+    }
+
+    .services-page #dataset-description {
+        margin-bottom: 14px;
+        font-size: 0.84rem;
+        line-height: 1.6;
+    }
+
+    /* Keep the table inside its own scroll area */
+
+    .services-page .services-table-scroll {
+        width: 100%;
+        max-width: 100%;
+        border-radius: 8px;
+    }
+
+    .services-page #dataset-table {
+        width: 100%;
+        min-width: 560px;
+        table-layout: auto;
+    }
+
+    .services-page #dataset-table th {
+        padding: 12px;
+        font-size: 0.75rem;
+        letter-spacing: 0.2px;
+    }
+
+    .services-page #dataset-table td {
+        padding: 11px 12px;
+        font-size: 0.8rem;
+        line-height: 1.5;
+    }
+
+    /* Optional JSON output */
+
+    .services-page #services-json-output {
+        margin-top: 16px;
+    }
+
+    .services-page #services-json-content {
+        max-height: 320px;
+        padding: 14px;
+        font-size: 0.75rem;
+        line-height: 1.6;
+    }
+}
 /* ========================================
    SOCIAL MEDIA CAMPAIGN
 ======================================== */
