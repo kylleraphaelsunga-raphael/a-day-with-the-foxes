@@ -2,13 +2,7 @@
 {
   "functions": {
     "server.js": {
-      "includeFiles": [
-        "*.html",
-        "css/**",
-        "js/**",
-        "public/images/**",
-        "data/**"
-      ]
+      "includeFiles": "{*.html,css/**,js/**,public/images/**,data/**}"
     }
   }
 }
