@@ -6,18 +6,10 @@ const fs = require("fs");
 const app = express();
 const PORT = 3000;
 
-// Serve website files, but keep the data folder private
+// Serve website files
 app.use(express.static(__dirname, {
     index: false,
-    dotfiles: "ignore",
-    setHeaders: (res, filePath) => {
-        const dataPath = path.resolve(__dirname, "data") + path.sep;
-        const requestedPath = path.resolve(filePath);
-
-        if (requestedPath.startsWith(dataPath)) {
-            res.status(403);
-        }
-    }
+    dotfiles: "ignore"
 }));
 
 // Read JSON datasets
@@ -86,7 +78,11 @@ app.get("/api/customers", (req, res) => {
     }
 });
 
-// Start server
-app.listen(PORT, () => {
-    console.log(`ADF2027 running at http://localhost:${PORT}`);
-});
+// Start server locally or export for Vercel
+if (require.main === module) {
+    app.listen(PORT, () => {
+        console.log(`ADF2027 running at http://localhost:${PORT}`);
+    });
+}
+
+module.exports = app;
