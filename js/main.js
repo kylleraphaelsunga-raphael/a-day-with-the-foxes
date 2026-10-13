@@ -21,7 +21,7 @@ const CONFIG = {
 const ORGS = [
     {
         key: "council",
-        logo: "CSC.png",
+        logo: "csc.png",
         name: "HAU School of Computing Student Council",
         tagline: "Rooted in Code, Driven by Purpose.",
         category: "Highest governing body of the School of Computing",
@@ -128,7 +128,7 @@ function mountHeader() {
                 <a class="brand" href="/index.html" aria-label="ADF2027 Home">
                     <img
                         class="brand-logo"
-                        src="/images/SOC.png"
+                        src="/images/soc.png"
                         alt="HAU School of Computing Logo"
                     >
 
