@@ -460,6 +460,43 @@ function loadHeroImages() {
 }
 
 
+function initHeroImageSlider() {
+    const heroImages = document.querySelector(".hero-imgs");
+
+    if (!heroImages) return;
+
+    function updateSlider() {
+        if (window.innerWidth <= 700) {
+            heroImages.style.display = "flex";
+            heroImages.style.overflowX = "auto";
+            heroImages.style.overflowY = "hidden";
+            heroImages.style.scrollSnapType = "x mandatory";
+            heroImages.style.gap = "14px";
+
+            [...heroImages.children].forEach(image => {
+                image.style.display = "block";
+                image.style.flex = "0 0 78%";
+                image.style.width = "78%";
+                heroImages.style.scrollbarWidth = "none";
+                heroImages.style.msOverflowStyle = "none";
+                image.style.height = "220px";
+                image.style.scrollSnapAlign = "center";
+            });
+        } else {
+            heroImages.removeAttribute("style");
+
+            [...heroImages.children].forEach(image => {
+                image.removeAttribute("style");
+            });
+        }
+    }
+
+    updateSlider();
+    window.addEventListener("resize", updateSlider);
+}
+
+
+
 /* =========================
    7. ORGANIZATION CARDS
    ========================= */
@@ -743,9 +780,12 @@ document.addEventListener("DOMContentLoaded", () => {
     mountHeader();
     mountFooter();
     loadHeroImages();
+    initHeroImageSlider();
     renderOrganizationCards();
     loadPromotionalVideo();
     initializeScrollReveal();
     initializeCountdown();
     initializeImageLightbox();
 });
+
+    // Some pages may not contain a lightbox.

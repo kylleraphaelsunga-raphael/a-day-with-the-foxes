@@ -853,7 +853,7 @@ p+p {
     letter-spacing: 2px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 700px) {
     .countdown-box {
         padding: 22px 12px;
         border-radius: 16px;
@@ -1919,15 +1919,23 @@ p+p {
     }
 
     .hero-imgs>div {
-        height: 185px;
+        display: block;
+        width: 100%;
+        min-width: 0;
+        height: 160px;
         border-radius: 14px;
     }
 
     .hero-imgs>div:nth-child(2) {
-        height: 210px;
+        height: 175px;
     }
 
     .hero-imgs>div:nth-child(3) {
+        display: block;
+        height: 160px;
+    }
+
+    .hero-imgs::-webkit-scrollbar {
         display: none;
     }
 
